@@ -1,0 +1,30 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+//я убрал отступы, чтобы легче было разобраться в своих. Если строго настрого запрещено - уберу :)
+ul,
+li,
+p {
+  margin: 0;
+  padding: 0;
+  /*   list-style: none;
+ */
+}
+
+//list-style лучше убирать только тем классам, которым нужно. А нужно было всем.
+ul[class],
+ol[class] {
+  list-style: none;
+}
