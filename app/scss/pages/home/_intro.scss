@@ -1,0 +1,30 @@
+.intro {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+
+  &__inner {
+    flex: 1 1 auto;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__title {
+    font-size: 200px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-size: 24px;
+
+  }
+}
