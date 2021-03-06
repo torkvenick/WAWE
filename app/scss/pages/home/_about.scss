@@ -1,0 +1,23 @@
+.about {
+  padding: 190px 0 170px;
+
+  &__inner {
+    margin: 0 -60px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__col {
+    max-width: 480px;
+    margin: 0 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__text {
+    color: $text;
+    margin-bottom: 30px;
+  }
+}
+

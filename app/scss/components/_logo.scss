@@ -1,0 +1,29 @@
+/* start logo */
+.logo {
+  height: 65px;
+  font-size: 0;
+
+  &:hover {
+    .logo__img {
+      transform: scale(1.1);
+    }
+  }
+
+  &:active {
+    .logo__img {
+      transform: scale(1.0);
+    }
+  }
+
+  //при смене картинки логотип не разлезается
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: left;
+    transition: transform 0.3s;
+  }
+}
+/* end logo */
+
+
