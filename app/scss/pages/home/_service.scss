@@ -1,0 +1,47 @@
+.service {
+  padding: 190px 0 200px;
+  background-color: $bg;
+
+  &__inner {
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  &__card {
+    padding: 45px 30px;
+    text-align: center;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+  }
+  
+  &__title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
+  }
+  
+  &__list {
+    text-align: left;
+    margin-bottom: auto;
+  }
+  
+  &__item {
+    margin-bottom: 20px;
+  }
+  
+  &__price {
+    margin-top: 40px;
+    font-size: 36px;
+    line-height: 1.17;
+    color: #01353E;
+  }
+
+  &__symbol {
+    vertical-align: middle;
+  }
+}

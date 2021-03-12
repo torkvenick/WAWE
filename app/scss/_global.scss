@@ -96,3 +96,14 @@ body {
   text-align: center;
   text-transform: uppercase;
 }
+
+//screen reader
+.sr-only {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0;
+  overflow: hidden;
+}
