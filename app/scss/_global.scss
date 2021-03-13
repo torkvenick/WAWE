@@ -95,6 +95,18 @@ body {
   font-size: 24px;
   text-align: center;
   text-transform: uppercase;
+  outline: transparent;
+  cursor: pointer;
+
+  transition: all 0.3s;
+
+  &:focus {
+    box-shadow: inset 0px 0px 3px 1px $green;
+  }
+
+  &:hover {
+    transform: rotate(2deg);
+  }
 }
 
 //screen reader

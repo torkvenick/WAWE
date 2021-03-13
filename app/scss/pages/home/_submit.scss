@@ -13,22 +13,47 @@
 
   &__form {
     width: 50%;
+    min-height: 460px;
     padding: 0 30px 0 0;
   }
 
   .form {
+    height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+
 
     &__input {
       border:transparent;
       border-bottom: 2px solid #dadada;
       padding-bottom: 18px;
       margin-bottom: 30px;
+      font-size: 18px;
+      line-height: 1;
+      font-weight: 400;
+      color: $text;
+      outline: transparent;
       
       &::placeholder {
         color: $green;
-        max-width: 260px;
+      }
+
+      &:focus::placeholder {
+        color: transparent;
+      }
+
+      &--phone {
+        margin-bottom: 50px;
+      }
+
+      &--message {
+        margin-bottom: 70px;
+        resize: none;
+
+        &::placeholder {
+          max-width: 260px;
+        }
       }
     }
   }

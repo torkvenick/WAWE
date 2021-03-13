@@ -5,12 +5,9 @@
     margin-bottom: 220px;
   }
 
-  &__inner {
-  
-  }
-
   &__container {
     position: relative;
+    overflow: hidden;
   }
 
   &__item {
@@ -52,21 +49,21 @@
   &__pagination {
     position: absolute;
   }
-  
+
   .swiper-pagination-bullets {
     bottom: 77px;
-    
+
     .swiper-pagination-bullet {
       width: 15px;
       height: 15px;
       margin: 0 7px 0 8px;
-      background-color: #fff;  
+      background-color: #fff;
       opacity: 1;
-  
+
       &-active {
         background-color: #00B2A0;
       }
     }
-  }  
-  
+  }
+
 }
