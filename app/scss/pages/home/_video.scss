@@ -1,0 +1,18 @@
+.video {
+  padding: 200px 0;
+
+  &__content {
+    min-height: 600px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icon {
+    cursor: pointer;
+  }
+}
+

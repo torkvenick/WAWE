@@ -1,25 +1,30 @@
 
 .quote {
   background-color: #F8F8F8;
+  
 
   &__inner {
+    margin: 0 auto;
     padding: 80px 0 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
   }
-
+  
   &__text {
-    display: inline-block;
     font-size: 36px;
     line-height: 1.1;
     font-weight: 400;
     font-style: italic;
-    position: relative;
   }
 
   &__subtext {
-    position: absolute;
-    right: -25%;
-    font-weight: 300;
-    font-size: 14px;
+    max-width: 430px;
+    width: 100%;
+    font-style: italic;
+    align-self: flex-end;
+    text-align: left;
   } 
 }

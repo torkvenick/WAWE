@@ -27,29 +27,31 @@
   &__inner {
     display: flex;
     flex-wrap: wrap;
-    /* background-color: tomato;
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);    grid-template-columns: 48.3333% 24.1666% 20.8333%;
-    grid-gap: 40px; */
   }
 
-
-/*   @media (min-width: 767px) {
+  @media (min-width: 767px) {
     &__inner {
       margin: 0 -40px 0 0;
     }
-  } */
-&__item {
+  }  
+  
+  flex-basis: 24%;
+  
+  flex-basis: 24%;
+  
+  &__img {
+    margin: 0 40px 40px 0;
+    object-fit: cover;
+    object-position: center;
+    
+    &:nth-child(1) {
+    flex-basis: 46%;
+    }
+  }
 
+  .btn {
+    margin: 10px auto 0;
+    display: block;
+  }
 }
 
-&__img {
-  object-fit: cover;
-  object-position: center;
-}
-
-.btn {
-  margin: 10px auto 0;
-  display: block;
-}
-}

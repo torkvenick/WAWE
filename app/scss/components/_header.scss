@@ -6,7 +6,7 @@
   right: 0;
   left: 0;
   z-index: 3;
-
+  
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -14,11 +14,20 @@
     padding: 35px 0 0;
   }
 
+  .logo {
+    max-width: 150px;
+    margin-right: 55px;
+  }
+  
   .menu {
+    max-width: 950px;
+    width: 100%;
+    padding-top: 10px;
     &-list {
       display: flex;
       flex-wrap: wrap;
       @include adaptiv-font(24, 16);
+      line-height: 1.15;
 
       &__item {
         margin-right: 45px;
