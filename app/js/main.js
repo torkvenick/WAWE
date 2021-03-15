@@ -1,4 +1,4 @@
-var mixer = mixitup('.gallery__inner');
+var mixer = mixitup('.gallery__items');
 
 var mySwiper = new Swiper('.blog__container', {
   // Optional parameters
@@ -8,4 +8,10 @@ var mySwiper = new Swiper('.blog__container', {
     el: '.swiper-pagination',
     clickable: true,
   },
+});
+
+$(document).ready(function() {
+  $('.video__popup').magnificPopup({
+    type:'iframe'
+  });
 });
