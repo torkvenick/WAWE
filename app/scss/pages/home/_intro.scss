@@ -29,9 +29,9 @@
   }
 
   &__title {
-    margin-bottom: 5px;
     font-family: 'Raleway', sans-serif;
     @include adaptiv-font(200, 70);
+    line-height: 1.15;
     font-weight: 700;
     text-transform: uppercase;
     color: #0d302c;
