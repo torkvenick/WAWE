@@ -31,17 +31,20 @@
 
   @media (min-width: 767px) {
     &__items {
-      margin: 0 -40px 0 0;
     }
   }  
 
   &__item {
     max-width: 46.7%;
     height: 280px;
-    margin: 0 40px 40px 0;
+    margin-bottom: 40px;
     position: relative;
     flex: 0 1 auto;
     order: 1;
+
+    & + & {
+      margin-left: 40px;
+    }
   }
 
   &__hover {

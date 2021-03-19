@@ -3,15 +3,13 @@
   
   &__list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
   }
 
   &__item {
+    margin: 0 45px 30px;
     text-align: center;
-
-    & + & {
-      margin-left: 90px;
-    }
   }
 
   &__qty {

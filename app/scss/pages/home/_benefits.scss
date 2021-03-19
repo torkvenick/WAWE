@@ -3,15 +3,22 @@
   background-color: $bg;
 
   &__items {
+    margin-bottom: 65px;
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 95px;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: 767px) {
+    &__items {
+      justify-content: space-between;
+    }
   }
 
   &__item {
-    max-width: 350px;
+    width: calc(100% / 3 - 60px);
     text-align: center;
   }
+
 
   &__title {
     max-width: 150px;

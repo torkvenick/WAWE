@@ -5,7 +5,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  
+
   &::before {
     content: '';
     position: absolute;
@@ -14,18 +14,18 @@
     width: 100%;
     background: linear-gradient(180deg, #01353E 0%, rgba(51, 51, 51, 0.595076) 31.64%, rgba(51, 51, 51, 0.222586) 74.35%, rgba(51, 51, 51, 0) 99.87%);
   }
-  
+
   &__inner {
     min-height: 100vh;
     max-width: 1000px;
     width: 100%;
     margin: 0 auto;
-    text-align: center;
     display: flex;
     flex: 1 1 auto;
     flex-direction: column;
     justify-content: center;
     position: relative;
+    text-align: center;
   }
 
   &__title {
@@ -46,5 +46,13 @@
   &__icon {
     display: block;
     text-align: center;
+
+    &-svg {
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: translateY(15px);
+      }
+    }
   }
 }
