@@ -37,14 +37,10 @@
   &__item {
     max-width: 46.7%;
     height: 280px;
-    margin-bottom: 40px;
+    margin: 0 40px 40px 0;
     position: relative;
     flex: 0 1 auto;
     order: 1;
-
-    & + & {
-      margin-left: 40px;
-    }
   }
 
   &__hover {

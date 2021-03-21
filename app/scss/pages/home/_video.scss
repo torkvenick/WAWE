@@ -2,13 +2,16 @@
   padding: 200px 0;
 
   &__content {
-    height: 600px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+
+    min-height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    vertical-align: middle;
   }
 
   &__icon {
