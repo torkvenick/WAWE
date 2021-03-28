@@ -1,9 +1,10 @@
 .benefits {
-  padding: 190px 0 170px;
+  @include adaptiv-value("padding-top", 190, 50, 0);
+  @include adaptiv-value("padding-bottom", 190, 50, 0);
   background-color: $bg;
-
+  
   &__items {
-    margin-bottom: 65px;
+    @include adaptiv-value("margin-bottom", 65, 10, 0);
     display: flex;
     flex-wrap: wrap;
   }
@@ -15,10 +16,15 @@
   }
 
   &__item {
-    width: calc(100% / 3 - 60px);
-    text-align: center;
+    margin-bottom: 30px;
   }
-
+  
+  @media (min-width: 767px) {
+    &__item {
+      text-align: center;
+      flex: 0 1 29.166666%;
+    }
+  }
 
   &__title {
     max-width: 150px;
@@ -36,9 +42,11 @@
   &__info {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   &__stats {
+    margin: 0 26px 30px 0;
   }
 
   &__stat {
@@ -55,10 +63,19 @@
   }
 
   &__description {
-    max-width: 600px;
+    flex: 1 0 50%;
+  }
+
+  @media (min-width: 767px) {
+    &__description {
+      flex-grow: 0;
+    }
   }
 
   &__text {
-    margin-bottom: 30px;
+    
+    & + & {
+      margin-top: 30px;
+    }
   }
 }
