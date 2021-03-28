@@ -65,7 +65,7 @@ body {
 }
 
 .title {
-  margin-bottom: 100px;
+  @include adaptiv-value("margin-bottom", 100, 50, 0);
   position: relative;
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
@@ -74,13 +74,14 @@ body {
   text-align: center;
   text-transform: uppercase;
   color: $title;
+  
   &::after {
     content: '/';
     position: absolute;
     right: auto;
-    font-size: 72px;
-    color: $green;
-  }
+    @include adaptiv-font(72, 45);
+    color: $green;  
+  } 
 }
 
 .btn {

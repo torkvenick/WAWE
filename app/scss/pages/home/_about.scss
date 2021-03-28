@@ -1,20 +1,24 @@
 .about {
-  padding: 190px 0 140px;
+  @include adaptiv-value("padding-top", 190, 50, 0);
+  @include adaptiv-value("padding-bottom", 140, 40, 0);
 
   &__inner {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   &__col {
-    max-width: 480px;
-    margin-bottom: 30px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    & + & {
-      margin-left: 120px;
+  }
+  
+  @media (min-width: 767px) {
+    &__col {
+      width: 40%;
+      margin-bottom: 30px;
     }
   }
 
