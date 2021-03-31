@@ -14,7 +14,7 @@
   }
   
   &__text {
-    font-size: 36px;
+    @include adaptiv-font(36, 20);
     line-height: 1.1;
     font-weight: 400;
     font-style: italic;
@@ -22,9 +22,16 @@
 
   &__subtext {
     max-width: 430px;
-    width: 100%;
+    align-self: center;
+    @include adaptiv-font(14, 12);
     font-style: italic;
-    align-self: flex-end;
-    text-align: left;
   } 
+  
+  @media (min-width: 767px) {
+    &__subtext {
+      width: 100%;
+      align-self: flex-end;
+      text-align: left;
+    }
+  }  
 }

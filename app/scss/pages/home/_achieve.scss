@@ -1,7 +1,6 @@
 .achieve {
   overflow: hidden;
-  padding-bottom: 200px;
-  
+
   &__content {
     flex: 0 0 100%;
     display: flex;
@@ -15,7 +14,7 @@
   &__inner {
     padding: 100px 20px 50px 30px;
   }
-  
+
   @media (min-width: 767px) {
     &__inner {
       width: 50%;
@@ -26,7 +25,7 @@
   .title {
     text-align: start;
   }
-  
+
   &__item {
     padding-right: 20px;
   }
@@ -34,7 +33,7 @@
   &__text {
     margin-bottom: 30px;
   }
-  
+
   &__img {
     max-width: 100%;
   }
@@ -57,5 +56,5 @@
       left: 0;
       object-fit: cover;
     }
-}
+  }
 }
