@@ -1,5 +1,6 @@
 .video {
-  padding: 200px 0;
+  @include adaptiv-value("padding-top", 200, 50, 0);
+  @include adaptiv-value("padding-bottom", 200, 50, 0);
 
   &__content {
 
@@ -10,8 +11,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    text-align: center;
-    vertical-align: middle;
   }
 
   &__icon {
