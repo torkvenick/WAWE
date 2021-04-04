@@ -1,5 +1,6 @@
 .service {
-  padding: 190px 0 170px;
+  @include adaptiv-value("padding-top", 190, 50, 0);
+  @include adaptiv-value("padding-bottom", 170, 50, 0);
   background-color: $bg;
 
   &__inner {

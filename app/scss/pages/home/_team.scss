@@ -1,8 +1,5 @@
 .team {
-
-  &__inner {
-    padding: 100px 0 200px;
-  }
+  @include adaptiv-value("padding-bottom", 170, 50, 0);
 
   &__list {
     display: flex;
@@ -11,8 +8,21 @@
   }
 
   &__item {
-    max-width: 300px;
+    width: 100%;
+    margin-bottom: 30px;
     text-align: center;
+  }
+
+  @media (min-width: 767px) {
+    &__item {
+      width: 50%;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    &__item {
+      width: 27.5%;
+    }
   }
 
   &__img {
@@ -20,7 +30,7 @@
     height: 450px;
     margin-bottom: 25px;
     object-fit: cover;
-    object-position: center;
+    object-position: top center;
   }
 
   &__name {
