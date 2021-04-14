@@ -28,19 +28,15 @@
   &__items {
     display: flex;
     flex-wrap: wrap;
+    margin: 0 -20px;
   }
-  
-  @media (min-width: 1239px) {
-    &__items {
-    }
-  }  
 
   &__item {
-    max-width: 47%;
     height: 280px;
     margin: 0 0 40px 0;
+    padding: 0 20px;
     position: relative;
-    flex: 1 1 auto;
+    flex: 0 1 auto;
     order: 1;
 
     &::after {
@@ -68,10 +64,10 @@
     object-fit: cover;
     object-position: center;
   }
-  
+
   .btn {
-    margin: 10px auto 0;
     display: block;
+    margin: 10px auto 0;
   }
 }
 

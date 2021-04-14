@@ -1,48 +1,69 @@
 .service {
   @include adaptiv-value("padding-top", 190, 50, 0);
-  @include adaptiv-value("padding-bottom", 170, 50, 0);
+  @include adaptiv-value("padding-bottom", 170, 20, 0);
   background-color: $bg;
 
   &__inner {
-    padding-top: 100px;
+    @include adaptiv-value("padding-top", 100, 0, 0);
+    margin: 0 -15px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
+
+  &__card-body {
+    padding: 0 15px;
+    margin: 0 0 30px 0;
+  }
   
   &__card {
-    max-width: 360px;
-    margin-bottom: 30px;
-    padding: 45px 30px;
+    height: 100%;
+    @include adaptiv-value("padding-top", 45, 20, 0);
+    @include adaptiv-value("padding-bottom", 45, 20, 0);
+    padding-right: 30px;
+    padding-left: 30px;
+    display: flex;
+    flex: 0 1 100%;
+    flex-direction: column;
+    background-color: #fff;
     text-align: center;
     font-weight: 400;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #fff;
+  }
 
-    & + & {
-      margin-left: 60px;
+  @media (min-width: 767px) {
+    &__card-body {
+      flex: 0 1 45%;
     }
   }
   
+  @media (min-width: 1023px) {
+    &__card-body {
+      flex: 0 1 33.3333%;
+    }
+  }
+
   &__title {
-    margin-bottom: 50px;
+    @include adaptiv-value("margin-bottom", 50, 25, 0);
     font-size: 36px;
     line-height: 1.17;
   }
   
   &__list {
-    text-align: left;
     margin-bottom: auto;
   }
   
+  @media (min-width: 1023px) {
+    &__list {
+      text-align: left;
+    }
+  }
+  
   &__item {
-    margin-bottom: 20px;
+    @include adaptiv-value("margin-bottom", 20, 15, 0);
   }
   
   &__price {
-    margin-top: 40px;
+    @include adaptiv-value("margin-top", 40, 10, 0);
     font-size: 36px;
     line-height: 1.17;
     color: #01353E;

@@ -1,20 +1,38 @@
 .submit {
-  padding-bottom: 200px;
-
-  .title {
-    margin-bottom: 230px;
-  }
+  @include adaptiv-value("padding-bottom", 200, 50, 0);
 
   &__inner {
-    margin-bottom: 200px;
+    @include adaptiv-value("margin-top", 130, 0, 0);
+    @include adaptiv-value("margin-bottom", 170, 50, 0);
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  &__form {
-    width: 50%;
-    min-height: 460px;
-    padding: 0 30px 0 0;
+  &__item {
+    flex: 1 1 70%;
+
+    &--form {
+      min-height: 460px;
+      margin: 0 0 50px 0;
+    }
+
+    &--contacts {
+      padding: 0 30px 5px 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      background-color: $bg;
+      font-weight: 400;
+      @include adaptiv-font(24, 16);
+    }
+  }
+
+  @media (min-width: 767px) {
+    &__item {
+      flex: 0 1 50%;
+      margin-bottom: 0;
+    }
   }
 
   .form {
@@ -23,9 +41,8 @@
     flex-direction: column;
     justify-content: space-between;
 
-
     &__input {
-      border:transparent;
+      border: transparent;
       border-bottom: 2px solid #dadada;
       padding-bottom: 18px;
       margin-bottom: 30px;
@@ -34,7 +51,7 @@
       font-weight: 400;
       color: $text;
       outline: transparent;
-      
+
       &::placeholder {
         color: $green;
       }
@@ -48,7 +65,7 @@
       }
 
       &--message {
-        margin-bottom: 70px;
+        @include adaptiv-value("margin-bottom", 50, 30, 0);
         resize: none;
 
         &::placeholder {
@@ -58,34 +75,35 @@
     }
   }
 
+  @media (min-width: 767px) {
+    .form {
+      padding: 0 20px 0 0;
+    }
+  }
+
+  .btn {
+    margin: 0 auto;
+  }
+
   &__contact {
-    width: 50%;
-    padding: 50px 30px 5px 50px;
-    background-color: $bg;
-    font-weight: 400;
-    font-size: 24px;
+    max-width: 330px;
+    margin: 15px auto;
+    text-align: center;
   }
 
-  &__contact-item {
-    margin-bottom: 65px;
-  }
-
-  &__text {
+  @media (min-width: 767px) {
+    &__contact {
+      margin: 0;
+      text-align: left;
+    }
   }
 
   &__subtext {
     display: block;
   }
 
-  &__phone {
-  }
-
   &__tel {
     display: block;
-  }
-
-  &__address {
-    max-width: 350px;
   }
 
   &__list {
@@ -95,8 +113,8 @@
     text-align: center;
     text-transform: uppercase;
   }
-  
-  &__item {
+
+  &__link {
     margin-right: 10px;
     display: inline-block;
     transition: color 0.3s;
@@ -107,5 +125,6 @@
   }
 
   &__social {
+    @include adaptiv-font(24, 16);
   }
 }

@@ -1,7 +1,7 @@
 .footer {
   background-color: #00B2A0;
   &__inner {
-    min-height: 200px;
+    @include adaptiv-value("min-height", 200, 100, 0);
     padding: 20px 0;
     display: flex;
     justify-content: center;

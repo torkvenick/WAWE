@@ -1,12 +1,17 @@
 .map {
-  padding: 200px 0;
-
-  &__inner {
-    display: flex;
-    justify-content: center;
+  @include adaptiv-value("padding-top", 200, 50, 0);
+  @include adaptiv-value("padding-bottom", 200, 50, 0);
+  
+  &__location {
+    @include adaptiv-value("min-height", 640, 150, 0);
+    position: relative;
   }
 
-  &__location {
-    max-width: 1200px;
+  &__image {
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
   }
 }

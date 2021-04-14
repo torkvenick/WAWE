@@ -85,11 +85,9 @@ body {
 }
 
 .btn {
-  @include adaptiv-value("padding-top", 24, 15, 0);
-  @include adaptiv-value("padding-bottom", 24, 15, 0);
-  @include adaptiv-value("padding-right", 70, 20, 0);
-  @include adaptiv-value("padding-left", 70, 20, 0);
-
+  max-width: 350px;
+  width: 100%;
+  padding: 21px 0;
   background-color: transparent;
   border: 1px solid #C4C4C4;
   @include adaptiv-font(24, 16);
@@ -105,13 +103,6 @@ body {
   
   &:hover {
     transform: rotate(-2deg);
-  }
-}
-
-@media (min-width: 767px) {
-  .btn {
-    min-width: 350px;
-    padding: 24px 0;
   }
 }
 

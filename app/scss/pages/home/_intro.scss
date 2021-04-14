@@ -1,6 +1,5 @@
 .intro {
-  min-height: 100vh;
-  padding-bottom: 60px;
+  height: 100vh;
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
@@ -16,7 +15,7 @@
   }
 
   &__inner {
-    min-height: 100vh;
+    height: 100vh;
     max-width: 1000px;
     width: 100%;
     margin: 0 auto;
@@ -44,9 +43,9 @@
   }
 
   &__icon {
-    display: block;
-    text-align: center;
-
+    position: absolute;
+    left: 50%;
+    @include adaptiv-value("bottom", 80, 20, 0);
     &-svg {
       transition: transform 0.3s;
 
