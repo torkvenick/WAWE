@@ -1,6 +1,6 @@
 .blog {
   @include adaptiv-value("padding-top", 200, 50, 0);
-  @include adaptiv-value("padding-bottom", 200, 50, 0);
+  @include adaptiv-value("padding-bottom", 200, 100, 0);
 
   .title {
     @include adaptiv-value("margin-bottom", 220, 50, 0);
@@ -66,7 +66,7 @@
   }
 
   .swiper-pagination-bullets {
-    bottom: 70px;
+    @include adaptiv-value("bottom", 70, 20, 0);
 
     .swiper-pagination-bullet {
       width: 15px;
