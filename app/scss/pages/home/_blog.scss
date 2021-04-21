@@ -69,8 +69,8 @@
     @include adaptiv-value("bottom", 70, 20, 0);
 
     .swiper-pagination-bullet {
-      width: 15px;
-      height: 15px;
+      @include adaptiv-value("width", 15, 10, 0);
+      @include adaptiv-value("height", 15, 10, 0);
       margin: 0 7px 0 8px;
       background-color: #fff;
       opacity: 1;
