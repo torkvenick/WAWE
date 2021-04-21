@@ -74,14 +74,7 @@
     flex: 1 0 50%;
   }
 
-  @media (min-width: 767px) {
-    &__description {
-      flex-grow: 0;
-    }
-  }
-
-  &__text {
-    
+  &__text {    
     & + & {
       margin-top: 30px;
     }

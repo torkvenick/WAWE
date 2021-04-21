@@ -1,5 +1,8 @@
 .achieve {
   overflow: hidden;
+  @media (min-width: 767px) {
+    display: flex;
+}
 
   &__content {
     flex: 0 0 100%;
@@ -13,16 +16,14 @@
 
   &__inner {
     padding: 100px 20px 50px 30px;
-  }
-
-  @media (min-width: 767px) {
-    &__inner {
-      width: 50%;
-      padding: 200px 0 120px 0;
+    @media (min-width: 767px) {
+        width: 50%;
+        padding: 200px 0 120px 0;
     }
   }
 
   .title {
+    padding-right: 30px;
     text-align: start;
   }
 
@@ -33,22 +34,19 @@
   &__text {
     margin-bottom: 30px;
   }
-
-  &__img {
-    max-width: 100%;
-  }
-
-  @media (min-width: 767px) {
-    display: flex;
-
-    &__image {
+  
+  &__image-body {
+    @media (min-width: 767px) {
       padding: 0 0 44% 0;
       position: relative;
       flex: 0 0 50%;
       transform: translate(-100%, 0px);
     }
+  }
 
-    &__img {
+  &__image {
+    max-width: 100%;
+    @media (min-width: 767px) {
       position: absolute;
       width: 100%;
       height: 100%;
