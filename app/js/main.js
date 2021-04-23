@@ -15,15 +15,6 @@ $('.menu__link').on('click', function(e){
   $(this).addClass('menu__link--active');
 });
 
-/* const menuBody = document.querySelector('.menu__body');
-if (activeNavLink) {
-	activeNavLink.addEventListener("click", function (e) {
-		activeNavLink.classList.toggle('menu__link--active');
-		
-	});
-} */
-
-
 
 //Scroll by click / прокрутка при клике
 
