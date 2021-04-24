@@ -10,7 +10,7 @@ if (iconMenu) {
 }
 
 // Active condition of nav link / Активное состояние навигационной ссылки при нажатии
-$('.menu__link').on('click', function(e){ 
+$('.menu__link').on('click', function (e) {
   $('.menu__link').removeClass('menu__link--active');
   $(this).addClass('menu__link--active');
 });
@@ -32,35 +32,32 @@ if (menuLinks.length > 0) {
     /* here we get the object we click on (link in our case) / здесь получаем обьект, на который кликаем (ссылка в нашем случае) */
     const menuLink = e.target;
     /* creating task, which checks if data attribute is filled, if there's something in it and if object, to which data attribute is related, exist / создаем важное условие, проверяющее заполнен ли дата атрибут, есть ли в нём что-то и существует ли объект, на который он ссылается */
-    if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)){
-        /* following const gives us this object / данной константой получаем объект */
-        const gotoBlock = document.querySelector(menuLink.dataset.goto);
-        /* calculating position of the object? including header height / высчитываем положение объекта с учетом высоты шапки */
-        /* pageYOffset - qty of scrolled pixels / pageYOffset - количество прокрученных пикселей */
-        const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
+    if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+      /* following const gives us this object / данной константой получаем объект */
+      const gotoBlock = document.querySelector(menuLink.dataset.goto);
+      /* calculating position of the object? including header height / высчитываем положение объекта с учетом высоты шапки */
+      /* pageYOffset - qty of scrolled pixels / pageYOffset - количество прокрученных пикселей */
+      const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
 
-        if (iconMenu.classList.contains('_active')) {
-          document.body.classList.remove('_lock');
-          iconMenu.classList.remove('_active');
-          menuBody.classList.remove('_active');
-        }
+      if (iconMenu.classList.contains('_active')) {
+        document.body.classList.remove('_lock');
+        iconMenu.classList.remove('_active');
+        menuBody.classList.remove('_active');
+      }
 
-        /* makes scroll work. Giving task to browser's window / заставляет скролл прокручиваться. Мы обращаемся к окну браузера */
-        window.scrollTo({
-          top: gotoBlockValue,
-          behavior: 'smooth'
-        });
-        /* Disabling link default work. Allow her only to go to necessary section / Отключаем ссылку, позволяя лишь скроллить к нужному блоку */
-        e.preventDefault();
+      /* makes scroll work. Giving task to browser's window / заставляет скролл прокручиваться. Мы обращаемся к окну браузера */
+      window.scrollTo({
+        top: gotoBlockValue,
+        behavior: 'smooth'
+      });
+      /* Disabling link default work. Allow her only to go to necessary section / Отключаем ссылку, позволяя лишь скроллить к нужному блоку */
+      e.preventDefault();
     }
   }
 
 }
 
-//Mixitup
-var mixer = mixitup('.gallery__items');
-
-//Swiper
+//Swiper for the blog
 var mySwiper = new Swiper('.blog__container', {
   // Optional parameters
   slidesPerView: 1,
@@ -80,4 +77,14 @@ $(document).ready(function () {
   $('.video__popup').magnificPopup({
     type: 'iframe'
   });
+  $('.gallery__items').magnificPopup({
+    delegate: "a", // the selector for gallery item
+    type: "image",
+    gallery: {
+      enabled: true
+    }
+  });
 });
+
+//Mixitup for gallery
+var mixer = mixitup('.gallery__items');
