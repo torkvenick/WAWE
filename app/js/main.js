@@ -14,6 +14,9 @@ if (iconMenu) {
 $('.menu__link').on('click', function (e) {
   $('.menu__link').removeClass('menu__link--active');
   $(this).addClass('menu__link--active');
+  $(this).scroll(function () {
+    $('.menu__link').removeClass('menu__link--active');
+  })
 });
 
 //fixed header during page scroll / фиксированная шапка при прокрутке
@@ -29,10 +32,9 @@ $(function () {
   });
 });
 
-
 //Scroll by click / прокрутка при клике
 $(document).ready(function () {
-  $("#menu").on("click", "a", function (event) {
+  $("#menu, #introIcon").on("click", "a", function (event) {
     //отменяем стандартную обработку нажатия по ссылке
     event.preventDefault();
     //забираем идентификатор блока с атрибута href
@@ -44,6 +46,16 @@ $(document).ready(function () {
       scrollTop: top
     }, 700);
   });
+ /*  $("#introIcon").on("click",  function (event) {
+    //забираем идентификатор блока с атрибута href
+    var id = $(this).attr('href'),
+      //узнаем высоту от начала страницы до блока на который ссылается якорь
+      top = $(id).offset().top;
+    //анимируем переход на расстояние - top за 1500 мс
+    $('body,html').animate({
+      scrollTop: top
+    }, 700);
+  }); */
 });
 
 

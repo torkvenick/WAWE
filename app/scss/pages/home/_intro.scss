@@ -47,17 +47,20 @@
     position: absolute;
     left: 50%;
     @include adaptiv-value("bottom", 80, 20, 0);
-
-    &-svg {
-      transition: transform 0.3s;
-
-      &:hover {
-        transform: translateY(15px);
-      }
+    transition: transform 0.3s;
+    
+    &:hover {
+      transform: translateY(15px);
     }
-
-    @media (max-height: 479px) {
+  
+    @media (max-height: 480px) {
       display: none;
     }
+  }
+
+  &__svg {
+    &::before {
+      content: url(../images/icons/intro-icon.svg);
+    }   
   }
 }
