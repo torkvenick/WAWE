@@ -1,6 +1,7 @@
 // Burger menu
 const iconMenu = document.querySelector('.menu__icon');
-const menuBody = document.querySelector('.menu__body');
+/* menu__body */
+const menuBody = document.querySelector('.menu__list');
 if (iconMenu) {
   iconMenu.addEventListener("click", function (e) {
     document.body.classList.toggle('_lock');

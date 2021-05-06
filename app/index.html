@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,69 +9,65 @@
 </head>
 
 <body>
+ 
 
-  <!-- Оболочка -->
-  <div class="wrapper">
-    <div class="content">
-
-  <!-- start header -->
+<!-- Оболочка -->
+<div class="wrapper">
+  <div class="content">
+    <!-- start header -->
 <header class="header">
   <div class="container">
     <div class="header__inner">
-      <a class="logo" href="#">
-        <img class="logo__img" src="images/logo.svg" alt="logo" class="logo__img">
-        Logo
-      </a>
-
-      <div class="menu">
-        <div class="menu__icon">
+      
+      <nav class="menu">
+        <a class="logo header__logo" href="#">
+          <img class="logo__img" src="images/logo.svg" alt="logo">
+          Logo
+        </a>
+        <button class="menu__icon" type="button">
           <span></span>
-        </div>
-        <nav class="menu__body">
+        </button>
           <ul class="menu__list">
             <li class="menu__item">
-              <a class="menu__link" href="#" data-goto=".page__section1_">
+              <a class="menu__link" href="#about">
                 О нас
               </a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#" data-goto=".page__section_2">
+              <a class="menu__link" href="#benefits">
                 Услуги
               </a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#" data-goto=".page__section_3">
+              <a class="menu__link" href="#service">
                 Стоимость
               </a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#" data-goto=".page__section_4">
+              <a class="menu__link" href="#blog">
                 Блог
               </a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#" data-goto=".page__section_5">
+              <a class="menu__link" href="#team">
                 Команда
               </a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#" data-goto=".page__section_6">
+              <a class="menu__link" href="#submit">
                 Контакты
               </a>
             </li>
           </ul>
-        </nav>
-      </div>
+      </nav>
 
     </div>
   </div>
 </header>
 
 <!-- end header -->
-  
-  <main class="main">
-    
-    <!-- start intro -->
+    <main class="main">
+      <!-- start intro -->
 <!-- I think this section should be fullscreen/Думаю, что секция должна быть фуллскрин, поэтому есть расхождение с Pixel Perfect -->
 <section class="intro" style="background-image: url(images/bg-intro.jpg);">
   <div class="container">
@@ -92,9 +87,9 @@
   </div>
 </section>
 <!-- end intro -->
-    <!-- start about -->
+      <!-- start about -->
 
-<section class="about page__section_1">
+<section class="about" id="about">
   <div class="container">
     <div class="title">
       О  ШКОЛЕ, О СЕРФИНГЕ, О КАНАРАХ
@@ -134,8 +129,8 @@
 </section>
 
 <!-- end about -->
-    <!-- Start benefits -->
-<article class="benefits page__section_2">
+      <!-- Start benefits -->
+<article class="benefits" id="benefits">
   <div class="container">
     <div class="title">
       В школе вы получите
@@ -257,7 +252,7 @@
 </article>
 
 <!-- End benefits -->
-    <!-- start achieve -->
+      <!-- start achieve -->
 
 <section class="achieve">
   <div class="achieve__content">
@@ -293,7 +288,7 @@
   </div>
 </section>
 <!-- end achieve -->
-    <!-- start Gallery -->
+      <!-- start Gallery -->
 
 <section class="gallery">
   <div class="container">
@@ -346,7 +341,7 @@
 </section>
 
 <!-- end Gallery -->
-    <section class="quote">
+      <section class="quote">
   <div class="container">
     <div class="quote__inner">
       <div class="quote__text">
@@ -358,7 +353,7 @@
     </div>
   </div>
 </section>
-    <!-- start video -->
+      <!-- start video -->
 
 <section class="video">
   <div class="container">
@@ -375,7 +370,7 @@
 </section>
 
 <!-- end video -->
-    <!-- start stats -->
+      <!-- start stats -->
 
 <section class="stats">
   <div class="container">
@@ -423,9 +418,9 @@
 </section>
 
 <!-- end stats -->
-    <!-- start blog -->
+      <!-- start blog -->
 
-<section class="blog page__section_4">
+<section class="blog" id="blog">
   <div class="title">
     Блог
   </div>
@@ -592,9 +587,9 @@
 </section>
 
 <!-- end blog -->
-    <!-- start team -->
+      <!-- start team -->
 
-<section class="team page__section_5">
+<section class="team" id="team">
   <div class="container">
     <div class="title">
       Наша команда
@@ -652,9 +647,9 @@
 </section>
 
 <!-- end team -->
-    <!-- start service -->
+      <!-- start service -->
 
-<section class="service page__section_3">
+<section class="service" id="service">
   <div class="container">
     <div class="title">
       Пакеты услуг
@@ -769,7 +764,7 @@
 </section>
 
 <!-- end service -->
-    <!-- start map -->
+      <!-- start map -->
 
 <section class="map">
   <div class="container">
@@ -784,7 +779,7 @@
 </section>
 
 <!-- end map -->
-    <section class="submit page__section_6">
+      <section class="submit" id="submit">
   <div class="container">
     <div class="title">
       Оставить Заявку
@@ -856,18 +851,15 @@
     </ul>
   </div>
 </section>
-    
-</main>
-
-</div>
-
-<!-- start footer -->
+    </main>
+  </div>
+  <!-- start footer -->
 
 <footer class="footer">
   <div class="container">
     <div class="footer__inner">
       <a class="logo" href="#">
-        <img class="logo__img" src="images/logo.svg" alt="logo" class="logo__img">
+        <img class="logo__img" src="images/logo.svg" alt="logo">
         Logo
       </a>
     </div>
@@ -875,13 +867,10 @@
 </footer>
 
 <!-- end footer -->
-
-
 </div>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="js/libs.min.js"></script>
-  <script src="js/main.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/libs.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 
 </html>
