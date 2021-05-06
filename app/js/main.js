@@ -17,59 +17,35 @@ $('.menu__link').on('click', function (e) {
 });
 
 //fixed header during page scroll / фиксированная шапка при прокрутке
-$(function() {
+$(function () {
   let header = $('.header');
-   
-  $(window).scroll(function() {
-    if($(this).scrollTop() > 1) {
-     header.addClass('header--fixed');
+
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 1) {
+      header.addClass('header--fixed');
     } else {
-     header.removeClass('header--fixed');
+      header.removeClass('header--fixed');
     }
   });
- });
+});
 
 
 //Scroll by click / прокрутка при клике
-
-/* Collecting objects' massive, which take part in navigation / Собираем массив обьектов, которые учавствуют в навигации */
-/* 1. Creating massive; querySelectorAll helps to search objects with class 'menu__link' and attribute [data-goto] / создаем массив. querySelectorAll помогает искать класс вместе с конкретным атрибутом */
-const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
-/* checking whether we have such objects. If we do, work starts / Проверяем есть ли данные обьекты. Если есть - начинаем работу */
-if (menuLinks.length > 0) {
-  menuLinks.forEach(menuLink => {
-    /* hanging "click" event on function, which we create below / вешаем событие "click" на созданную ниже функцию */
-    menuLink.addEventListener("click", onMenuLinkClick);
+$(document).ready(function () {
+  $("#menu").on("click", "a", function (event) {
+    //отменяем стандартную обработку нажатия по ссылке
+    event.preventDefault();
+    //забираем идентификатор блока с атрибута href
+    var id = $(this).attr('href'),
+      //узнаем высоту от начала страницы до блока на который ссылается якорь
+      top = $(id).offset().top;
+    //анимируем переход на расстояние - top за 1500 мс
+    $('body,html').animate({
+      scrollTop: top
+    }, 700);
   });
+});
 
-  function onMenuLinkClick(e) {
-    /* here we get the object we click on (link in our case) / здесь получаем обьект, на который кликаем (ссылка в нашем случае) */
-    const menuLink = e.target;
-    /* creating task, which checks if data attribute is filled, if there's something in it and if object, to which data attribute is related, exist / создаем важное условие, проверяющее заполнен ли дата атрибут, есть ли в нём что-то и существует ли объект, на который он ссылается */
-    if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
-      /* following const gives us this object / данной константой получаем объект */
-      const gotoBlock = document.querySelector(menuLink.dataset.goto);
-      /* calculating position of the object? including header height / высчитываем положение объекта с учетом высоты шапки */
-      /* pageYOffset - qty of scrolled pixels / pageYOffset - количество прокрученных пикселей */
-      const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
-
-      if (iconMenu.classList.contains('_active')) {
-        document.body.classList.remove('_lock');
-        iconMenu.classList.remove('_active');
-        menuBody.classList.remove('_active');
-      }
-
-      /* makes scroll work. Giving task to browser's window / заставляет скролл прокручиваться. Мы обращаемся к окну браузера */
-      window.scrollTo({
-        top: gotoBlockValue,
-        behavior: 'smooth'
-      });
-      /* Disabling link default work. Allow her only to go to necessary section / Отключаем ссылку, позволяя лишь скроллить к нужному блоку */
-      e.preventDefault();
-    }
-  }
-
-}
 
 //Swiper for the blog
 var mySwiper = new Swiper('.blog__container', {
