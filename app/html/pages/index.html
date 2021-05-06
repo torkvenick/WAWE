@@ -1,50 +1,29 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WAWE</title>
-  <link rel="stylesheet" href="css/libs.min.css">
-  <link rel="stylesheet" href="css/style.min.css">
-</head>
+@@include('../parts/main-components/_head.html')
 
 <body>
-
   <!-- Оболочка -->
   <div class="wrapper">
     <div class="content">
-
-  @@include('../parts/main-components/_header.html')
-  
-  <main class="main">
-    
-    @@include('../parts/page-home/_intro.html')
-    @@include('../parts/page-home/_about.html')
-    @@include('../parts/page-home/_benefits.html')
-    @@include('../parts/page-home/_achieve.html')
-    @@include('../parts/page-home/_gallery.html')
-    @@include('../parts/page-home/_quote.html')
-    @@include('../parts/page-home/_video.html')
-    @@include('../parts/page-home/_stats.html')
-    @@include('../parts/page-home/_blog.html')
-    @@include('../parts/page-home/_team.html')
-    @@include('../parts/page-home/_service.html')
-    @@include('../parts/page-home/_map.html')
-    @@include('../parts/page-home/_submit.html')
-    
-</main>
-
-</div>
-
-@@include('../parts/main-components/_footer.html')
-
-
-</div>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="js/libs.min.js"></script>
-  <script src="js/main.js"></script>
+      @@include('../parts/main-components/_header.html')
+      <main class="main">
+        @@include('../parts/page-home/_intro.html')
+        @@include('../parts/page-home/_about.html')
+        @@include('../parts/page-home/_benefits.html')
+        @@include('../parts/page-home/_achieve.html')
+        @@include('../parts/page-home/_gallery.html')
+        @@include('../parts/page-home/_quote.html')
+        @@include('../parts/page-home/_video.html')
+        @@include('../parts/page-home/_stats.html')
+        @@include('../parts/page-home/_blog.html')
+        @@include('../parts/page-home/_team.html')
+        @@include('../parts/page-home/_service.html')
+        @@include('../parts/page-home/_map.html')
+        @@include('../parts/page-home/_submit.html')
+      </main>
+    </div>
+    @@include('../parts/main-components/_footer.html')
+  </div>
+  @@include('../parts/main-components/_footer-scripts.html')
 </body>
 
 </html>

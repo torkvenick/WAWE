@@ -125,7 +125,7 @@
     &__list {
       display: flex;
       flex-wrap: wrap;
-      @include adaptiv-font(24, 20);
+      @include adaptiv-font(24, 28);
       line-height: 1.15;
     }
 

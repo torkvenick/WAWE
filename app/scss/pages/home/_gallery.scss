@@ -30,6 +30,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 -20px;
+
     @media (max-width: 1240px) {
       justify-content: center;
     }
@@ -41,11 +42,13 @@
     margin: 0 0 40px 0;
     padding: 0 20px;
     position: relative;
-    overflow: hidden;
-    &:hover {
-      .gallery__img{
-        transform: rotate(3deg);
-      }
+
+    &:nth-child(even):hover .gallery__img {
+      transform: rotate(3deg);
+    }
+
+    &:nth-child(odd):hover .gallery__img {
+      transform: rotate(-3deg);
     }
 
     @media (max-width: 1024px) {
@@ -77,6 +80,9 @@
 
     &:hover {
       opacity: 1;
+    }
+
+    &:nth-child(even):hover {
       transform: rotate(3deg);
     }
   }
