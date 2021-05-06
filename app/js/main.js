@@ -16,6 +16,19 @@ $('.menu__link').on('click', function (e) {
   $(this).addClass('menu__link--active');
 });
 
+//fixed header during page scroll / фиксированная шапка при прокрутке
+$(function() {
+  let header = $('.header');
+   
+  $(window).scroll(function() {
+    if($(this).scrollTop() > 1) {
+     header.addClass('header--fixed');
+    } else {
+     header.removeClass('header--fixed');
+    }
+  });
+ });
+
 
 //Scroll by click / прокрутка при клике
 
