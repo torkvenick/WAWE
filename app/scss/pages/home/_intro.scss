@@ -20,6 +20,7 @@
     max-width: 1000px;
     width: 100%;
     margin: 0 auto;
+    padding-bottom: 130px;
     display: flex;
     flex: 1 1 auto;
     flex-direction: column;
@@ -29,30 +30,43 @@
   }
 
   &__title {
+    margin: 0;
+    //отступ слева, чтобы подогнать под PP. Не думаю, что это лучшее решение, но я много игрался, чтобы иначе получилось. Не получилось.
+    padding-left: 55px;
     font-family: 'Raleway', sans-serif;
     @include adaptiv-font(200, 70);
     line-height: 1.15;
     font-weight: 700;
     text-transform: uppercase;
     color: #0d302c;
+
+    @media (max-width:1024px) {
+      padding-left: 0;
+    }
   }
 
   &__text {
+    //отступ слева, чтобы подогнать под PP. Не думаю, что это лучшее решение, но я много игрался, чтобы иначе получилось. Не получилось.
+    padding-left: 15px;
     @include adaptiv-font(24, 16);
     color: #000;
     font-weight: 400;
+
+    @media (max-width:1024px) {
+      padding-left: 0;
+    }
   }
 
   &__icon {
     position: absolute;
     left: 50%;
-    @include adaptiv-value("bottom", 80, 20, 0);
+    @include adaptiv-value("bottom", 85, 20, 0);
     transition: transform 0.3s;
-    
+
     &:hover {
       transform: translateY(15px);
     }
-  
+
     @media (max-height: 480px) {
       display: none;
     }
@@ -61,6 +75,6 @@
   &__svg {
     &::before {
       content: url(../images/icons/intro-icon.svg);
-    }   
+    }
   }
 }

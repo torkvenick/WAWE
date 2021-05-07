@@ -3,11 +3,14 @@
 .header {
   min-height: 100px;
   width: 100%;
+  padding-top: 35px;
+  //чтобы шапка ложилась поверх section intro
   position: absolute;
   z-index: 5;
 
   &--fixed {
     min-height: 65px;
+    padding-top: 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -16,6 +19,7 @@
 
   &__logo {
     max-width: 150px;
+    padding-left: 7px;
     z-index: 5;
   }
 }
@@ -86,6 +90,7 @@
   }
 
   &__list {
+    width: 79%;
     padding-top: 15px;
     display: flex;
     flex-wrap: wrap;
