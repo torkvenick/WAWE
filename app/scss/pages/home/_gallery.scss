@@ -43,11 +43,7 @@
     padding: 0 20px;
     position: relative;
 
-    &:nth-child(even):hover .gallery__img {
-      transform: rotate(3deg);
-    }
-
-    &:nth-child(odd):hover .gallery__img {
+    &:hover .gallery__img {
       transform: rotate(-3deg);
     }
 

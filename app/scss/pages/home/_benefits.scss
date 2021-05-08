@@ -1,5 +1,5 @@
 .benefits {
-  @include adaptiv-value("padding-top", 200, 50, 0);
+  @include adaptiv-value("padding-top", 200, 80, 0);
   @include adaptiv-value("padding-bottom", 170, 50, 0);
   background-color: $bg;
 
@@ -8,14 +8,25 @@
     display: flex;
     justify-content: space-between;
 
-    @media (max-width: 767px) {
+    @media (max-width: $r-md) {
       flex-wrap: wrap;
+      justify-content: center;
     }
   }
 
   &__item {
+    width: 100%;
     max-width: 350px;
     margin-bottom: 35px;
+    padding-right: 15px;
+
+    @media (max-width: $r-md) {
+      max-width: 70%;
+    }
+
+    @media (max-width: $r-xsm) {
+      max-width: 100%;
+    }
   }
 
   &__title {
@@ -30,26 +41,30 @@
     font-weight: 400;
     line-height: 1.2;
     text-transform: uppercase;
-    background-position: top left;
-    background-size: contain;
-    background-repeat: no-repeat;
+
+    @media (max-width: $r-md) {
+      margin-left: 0;
+      max-width: 100%;
+    }
 
     &::before {
       content: "";
       position: absolute;
       left: 0;
-    } 
+    }
 
     &--1 {
       &::before {
         content: url(../images/icons/benefits-icon.svg);
       }
     }
+
     &--2 {
       &::before {
         content: url(../images/icons/benefits-icon2.svg);
       }
     }
+
     &--3 {
       &::before {
         content: url(../images/icons/benefits-icon3.svg);
@@ -65,10 +80,14 @@
 
   &__stats {
     flex: 0 1 50%;
+
+    @media (max-width: $r-sm) {
+      flex: 1 1 100%;
+      margin-bottom: 20px;
+    }
   }
 
   &__stat {
-    width: 100%;
     text-align: right;
     margin-bottom: 10px;
     position: relative;
@@ -82,26 +101,33 @@
 
     &--1 {
       max-width: 250px;
+
       &::before {
         content: url(../images/icons/wave-sm.svg);
       }
     }
+
     &--2 {
       max-width: 300px;
+
       &::before {
         content: url(../images/icons/wave-mid.svg);
       }
     }
+
     &--3 {
       max-width: 350px;
+
       &::before {
         content: url(../images/icons/wave-big.svg);
       }
     }
+
     span {
       font-size: 24px;
       line-height: 1;
     }
+
     p {
       text-align: left;
     }
@@ -109,6 +135,11 @@
 
   &__description {
     flex: 0 1 50%;
+
+    @media (max-width: $r-sm) {
+      flex: 1 1 100%;
+    }
+
     p {
       margin-bottom: 30px;
     }
