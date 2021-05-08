@@ -1,12 +1,12 @@
 // Burger menu
-const iconMenu = document.querySelector('.menu__icon');
+const iconMenu = document.querySelector('.menu__btn');
 /* menu__body */
 const menuBody = document.querySelector('.menu__list');
 if (iconMenu) {
   iconMenu.addEventListener("click", function (e) {
     document.body.classList.toggle('_lock');
-    iconMenu.classList.toggle('_active');
-    menuBody.classList.toggle('_active');
+    iconMenu.classList.toggle('menu__btn--active');
+    menuBody.classList.toggle('menu__list--active');
   });
 }
 
@@ -44,18 +44,8 @@ $(document).ready(function () {
     //анимируем переход на расстояние - top за 1500 мс
     $('body,html').animate({
       scrollTop: top
-    }, 700);
+    }, 700);  
   });
- /*  $("#introIcon").on("click",  function (event) {
-    //забираем идентификатор блока с атрибута href
-    var id = $(this).attr('href'),
-      //узнаем высоту от начала страницы до блока на который ссылается якорь
-      top = $(id).offset().top;
-    //анимируем переход на расстояние - top за 1500 мс
-    $('body,html').animate({
-      scrollTop: top
-    }, 700);
-  }); */
 });
 
 

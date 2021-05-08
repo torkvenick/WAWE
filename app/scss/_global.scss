@@ -8,6 +8,7 @@ html {
   box-sizing: inherit;
 }
 
+
 //Start Для прижатия подвала к низу
 html,
 body {
@@ -70,7 +71,7 @@ body._lock {
 }
 
 .title {
-  @include adaptiv-value("margin-bottom", 100, 50, 0);
+  margin: 0 0 100px 0;
   position: relative;
   font-family: 'Raleway', sans-serif;
   font-weight: 600;

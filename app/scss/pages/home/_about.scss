@@ -1,28 +1,26 @@
 .about {
-  @include adaptiv-value("padding-top", 190, 50, 0);
-  @include adaptiv-value("padding-bottom", 140, 40, 0);
+  @include adaptiv-value("padding-top", 190, 80, 0);
+  @include adaptiv-value("padding-bottom", 170, 40, 0);
 
-  &__inner {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
+ &__inner {
+   display: flex;
+   
+   flex-wrap: wrap;
+   p {
+     width: 40%;
+     margin-bottom: 28px;
 
-  &__col {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    @media (min-width: 767px) {
-      width: 40%;
-      margin-bottom: 30px;
+     @media (max-width: $r-sm) {
+       flex: 1 1 100%;
+       margin-left: 0;
+      }
+      /* решает вопрос расположения второй колонки согласно PP. justify-content: space-between для about__inner ситуацию не меняет */
+      &:nth-child(even) {
+        margin-left: 120px;
+        @media (max-width: $r-sm) {
+          margin-left: 0;
+        }
+      }
     }
-  }
-
-
-  &__text {
-    color: $text;
-    margin-bottom: 30px;
-  }
+ }
 }

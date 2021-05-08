@@ -17,7 +17,6 @@
 
   &__inner {
     height: 100vh;
-    max-width: 1000px;
     width: 100%;
     margin: 0 auto;
     padding-bottom: 130px;
@@ -40,7 +39,7 @@
     text-transform: uppercase;
     color: #0d302c;
 
-    @media (max-width:1024px) {
+    @media (max-width:$r-md) {
       padding-left: 0;
     }
   }
@@ -52,7 +51,7 @@
     color: #000;
     font-weight: 400;
 
-    @media (max-width:1024px) {
+    @media (max-width:$r-md) {
       padding-left: 0;
     }
   }
@@ -66,13 +65,19 @@
     &:hover {
       transform: translateY(15px);
     }
+    
+    &:active {
+      transform: translateY(-15px);
+    }
 
-    @media (max-height: 480px) {
+    @media (max-height: $r-xsm) {
       display: none;
     }
   }
-
+  
   &__svg {
+    transition: transform 0.3s;
+
     &::before {
       content: url(../images/icons/intro-icon.svg);
     }
