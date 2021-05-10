@@ -1,22 +1,14 @@
 .blog {
-  @include adaptiv-value("padding-top", 200, 50, 0);
-  @include adaptiv-value("padding-bottom", 200, 100, 0);
-
-  .title {
-    @include adaptiv-value("margin-bottom", 220, 50, 0);
-  }
+  @include adaptiv-value("padding-top", 200, 80, 0);
 
   &__container {
+    @include adaptiv-value("padding-top", 130, 0, 0);
     position: relative;
     overflow: hidden;
   }
 
-  &__wrapper {
-    display: flex;
-  }
-
-  &__item {
-    min-height: 85vh;
+  &__slide {
+    @include adaptiv-value("height", 800, 500, 0);
     position: relative;
     background-position: center;
     background-repeat: no-repeat;
@@ -34,56 +26,54 @@
     }
   }
 
-  .container {
-    min-height: 85vh;
+  &__item {
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-  }
-
-  @media (min-width: 767px) {
-    .container {
-      justify-content: flex-end;
+    @media (max-width: $r-sm) {
+      justify-content: start;
+      padding-left: 20px;
     }
   }
 
   &__text {
-    max-width: 600px;
+    max-width: 50%;
     padding-bottom: 30px;
     position: relative; //если убрать - блок ложится под фон .blog__item::before и затемняет текст, что не нужно
     color: #fff;
+    @media (max-width: $r-sm) {
+      max-width: 80%;
+    }
   }
 
   &__title {
     text-transform: uppercase;
     @include adaptiv-font(48, 18);
-    line-height: 1.17;
+    line-height: 1.15;
     font-weight: 400;
+    margin: 0;
   }
-
-  &__pagination {
-    position: absolute;
-  }
-
-  .swiper-pagination-bullets {
+  .swiper-container-horizontal>.swiper-pagination-bullets {
     @include adaptiv-value("bottom", 70, 20, 0);
-
     .swiper-pagination-bullet {
       @include adaptiv-value("width", 15, 10, 0);
       @include adaptiv-value("height", 15, 10, 0);
-      margin: 0 7px 0 8px;
+      margin: 0 0 0 15px;
       background-color: #fff;
       opacity: 1;
       outline: transparent;
-      transition: transform 0.3s;
-
+      transition: background-color 0.3s;
+  
       &:hover {
-        transform: scale(1.2);
+        background-color: #abcac7;
       }
-
-      &-active {
-        background-color: #00B2A0;
-      }
+    }
+  
+    .swiper-pagination-bullet-active {
+      background-color: $green;
     }
   }
 }

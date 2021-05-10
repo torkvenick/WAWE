@@ -2,51 +2,57 @@
 
 <section class="gallery">
   <div class="container">
-    <h2 class="title">Галерея</h2>
-
-    <div class="gallery__btns">
-      <button class="gallery__btn" type="button" data-filter="all">Все</button>
-      <button class="gallery__btn" type="button" data-filter=".category-tourists">Туристы</button>
-      <button class="gallery__btn" type="button" data-filter=".category-nature">Природа</button>
-      <button class="gallery__btn" type="button" data-filter=".category-prof">Профи</button>
-    </div>
-
+    <h2 class="title gallery__title">Галерея</h2>
     <div class="gallery__inner">
-      <div class="gallery__items">
+      <ul class="gallery__btns">
+        <li>
+          <button type="button" data-filter="all">Все</button>
+        </li>
+        <li>
+          <button type="button" data-filter=".category-tourists">Туристы</button>
+        </li>
+        <li>
+          <button type="button" data-filter=".category-nature">Природа</button>
+        </li>
+        <li>
+          <button type="button" data-filter=".category-prof">Профи</button>
+        </li>
+      </ul>
 
-        <a class="gallery__item mix category-prof" data-order="1" href="images/content/gallery-1.jpg">
-          <img class="gallery__img" src="images/content/gallery-1.jpg" alt="surfGuy">
-          <div class="gallery__hover"></div>
-        </a>
-
-        <a class="gallery__item mix category-tourists" data-order="2" href="images/content/gallery-2.jpg">
-          <img class="gallery__img" src="images/content/gallery-2.jpg" alt="baby on board">
-          <div class="gallery__hover"></div>
-        </a>
-
-        <a class="gallery__item mix category-prof" data-order="3" href="images/content/gallery-3.jpg">
-          <img class="gallery__img" src="images/content/gallery-3.jpg" alt="man with surfboard">
-          <div class="gallery__hover"></div>
-        </a>
-
-        <a class="gallery__item mix category-tourists" data-order="4" href="images/content/gallery-4.jpg">
-          <img class="gallery__img" src="images/content/gallery-4.jpg" alt="surfing women">
-          <div class="gallery__hover"></div>
-        </a>
-
-        <a class="gallery__item mix category-nature" data-order="5" href="images/content/gallery-5.jpg">
-          <img class="gallery__img" src="images/content/gallery-5.jpg" alt="wave">
-          <div class="gallery__hover"></div>
-        </a>
-
-        <a class="gallery__item mix category-nature" data-order="6" href="images/content/gallery-6.jpg">
-          <img class="gallery__img" src="images/content/gallery-6.jpg" alt="girl with surfboard">
-          <div class="gallery__hover"></div>
-        </a>
-      </div>
+      <ul class="gallery__items">
+        <li >
+          <a class="mix category-prof" data-order="1" href="images/content/gallery-1.jpg">
+            <img src="images/content/gallery-1.jpg" alt="surfGuy">
+          </a>
+        </li>
+        <li >
+          <a class="mix category-tourists" data-order="2" href="images/content/gallery-2.jpg">
+            <img src="images/content/gallery-2.jpg" alt="baby on board">
+          </a>
+        </li>
+        <li >
+          <a class="mix category-prof" data-order="3" href="images/content/gallery-3.jpg">
+            <img src="images/content/gallery-3.jpg" alt="man with surfboard">
+          </a>
+        </li>
+        <li >
+          <a class="mix category-tourists" data-order="4" href="images/content/gallery-4.jpg">
+            <img src="images/content/gallery-4.jpg" alt="surfing women">
+          </a>
+        </li>
+        <li >
+          <a class="mix category-nature" data-order="5" href="images/content/gallery-5.jpg">
+            <img src="images/content/gallery-5.jpg" alt="wave">
+          </a>
+        </li>
+        <li >
+          <a class="mix category-nature" data-order="6" href="images/content/gallery-6.jpg">
+            <img src="images/content/gallery-6.jpg" alt="girl with surfboard">
+          </a>
+        </li>
+      </ul>
+      <button class="btn gallery__more" type="button">Показать еще</button>
     </div>
-    <button class="btn" type="button">Показать еще</button>
-  </div>
   </div>
 </section>
 

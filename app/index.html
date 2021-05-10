@@ -169,6 +169,7 @@
 
 <!-- End benefits -->
       <section class="achieve">
+  <!-- обёртка, чтобы блок с текстом оставался на своем месте и картинка на него не налезала -->
   <div class="achieve__content">
     <div class="container">
       <div class="achieve__inner">
@@ -200,51 +201,57 @@
 
 <section class="gallery">
   <div class="container">
-    <h2 class="title">Галерея</h2>
-
-    <div class="gallery__btns">
-      <button class="gallery__btn" type="button" data-filter="all">Все</button>
-      <button class="gallery__btn" type="button" data-filter=".category-tourists">Туристы</button>
-      <button class="gallery__btn" type="button" data-filter=".category-nature">Природа</button>
-      <button class="gallery__btn" type="button" data-filter=".category-prof">Профи</button>
-    </div>
-
+    <h2 class="title gallery__title">Галерея</h2>
     <div class="gallery__inner">
-      <div class="gallery__items">
+      <ul class="gallery__btns">
+        <li>
+          <button type="button" data-filter="all">Все</button>
+        </li>
+        <li>
+          <button type="button" data-filter=".category-tourists">Туристы</button>
+        </li>
+        <li>
+          <button type="button" data-filter=".category-nature">Природа</button>
+        </li>
+        <li>
+          <button type="button" data-filter=".category-prof">Профи</button>
+        </li>
+      </ul>
 
-        <a class="gallery__item mix category-prof" data-order="1" href="images/content/gallery-1.jpg">
-          <img class="gallery__img" src="images/content/gallery-1.jpg" alt="surfGuy">
-          <div class="gallery__hover"></div>
-        </a>
-
-        <a class="gallery__item mix category-tourists" data-order="2" href="images/content/gallery-2.jpg">
-          <img class="gallery__img" src="images/content/gallery-2.jpg" alt="baby on board">
-          <div class="gallery__hover"></div>
-        </a>
-
-        <a class="gallery__item mix category-prof" data-order="3" href="images/content/gallery-3.jpg">
-          <img class="gallery__img" src="images/content/gallery-3.jpg" alt="man with surfboard">
-          <div class="gallery__hover"></div>
-        </a>
-
-        <a class="gallery__item mix category-tourists" data-order="4" href="images/content/gallery-4.jpg">
-          <img class="gallery__img" src="images/content/gallery-4.jpg" alt="surfing women">
-          <div class="gallery__hover"></div>
-        </a>
-
-        <a class="gallery__item mix category-nature" data-order="5" href="images/content/gallery-5.jpg">
-          <img class="gallery__img" src="images/content/gallery-5.jpg" alt="wave">
-          <div class="gallery__hover"></div>
-        </a>
-
-        <a class="gallery__item mix category-nature" data-order="6" href="images/content/gallery-6.jpg">
-          <img class="gallery__img" src="images/content/gallery-6.jpg" alt="girl with surfboard">
-          <div class="gallery__hover"></div>
-        </a>
-      </div>
+      <ul class="gallery__items">
+        <li >
+          <a class="mix category-prof" data-order="1" href="images/content/gallery-1.jpg">
+            <img src="images/content/gallery-1.jpg" alt="surfGuy">
+          </a>
+        </li>
+        <li >
+          <a class="mix category-tourists" data-order="2" href="images/content/gallery-2.jpg">
+            <img src="images/content/gallery-2.jpg" alt="baby on board">
+          </a>
+        </li>
+        <li >
+          <a class="mix category-prof" data-order="3" href="images/content/gallery-3.jpg">
+            <img src="images/content/gallery-3.jpg" alt="man with surfboard">
+          </a>
+        </li>
+        <li >
+          <a class="mix category-tourists" data-order="4" href="images/content/gallery-4.jpg">
+            <img src="images/content/gallery-4.jpg" alt="surfing women">
+          </a>
+        </li>
+        <li >
+          <a class="mix category-nature" data-order="5" href="images/content/gallery-5.jpg">
+            <img src="images/content/gallery-5.jpg" alt="wave">
+          </a>
+        </li>
+        <li >
+          <a class="mix category-nature" data-order="6" href="images/content/gallery-6.jpg">
+            <img src="images/content/gallery-6.jpg" alt="girl with surfboard">
+          </a>
+        </li>
+      </ul>
+      <button class="btn gallery__more" type="button">Показать еще</button>
     </div>
-    <button class="btn" type="button">Показать еще</button>
-  </div>
   </div>
 </section>
 
@@ -332,166 +339,126 @@
   <h2 class="title">
     Блог
   </h2>
-  <div class="blog__inner">
+  <!-- Slider main container -->
+  <div class="blog__container">
+    <!-- Additional required wrapper -->
+    <ul class="swiper-wrapper blog__wrapper">
+      <!-- Slides -->
 
-    <!-- Slider main container -->
-    <div class="blog__container">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper blog__wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">
-          <div class="blog__item" style="background-image: url(images/content/blog-1.jpg);">
-            <div class="container">
-              <div class="blog__text">
-                <h3 class="blog__title">
-                  Что необходимо взять с собой на серф тур
-                </h3>
-                <div class="blog__subtitle">
-                  ТОП 20 необходимых вещей для комфортного отдыха и обучения
-                </div>
-              </div>
-            </div>
+      <li class="swiper-slide blog__slide" style="background-image: url(images/content/blog-1.jpg);">
+        <!-- обёртка для позиционирования -->
+        <div class="blog__item">
+          <div class="blog__text">
+            <h3 class="blog__title">
+              Что необходимо взять с собой на серф тур
+            </h3>
+            <p>ТОП 20 необходимых вещей для комфортного отдыха и обучения</p>
           </div>
         </div>
+      </li>
 
-        <div class="swiper-slide">
-          <div class="blog__item" style="background-image: url(images/content/blog-1.jpg);">
-            <div class="container">
-              <div class="blog__text">
-                <h3 class="blog__title">
-                  Что необходимо взять с собой на серф тур
-                </h3>
-                <div class="blog__subtitle">
-                  ТОП 20 необходимых вещей для комфортного отдыха и обучения
-                </div>
-              </div>
-            </div>
+      <li class="swiper-slide blog__slide" style="background-image: url(images/content/blog-1.jpg);">
+        <!-- обёртка для позиционирования -->
+        <div class="blog__item">
+          <div class="blog__text">
+            <h3 class="blog__title">
+              Что необходимо взять с собой на серф тур
+            </h3>
+            <p>ТОП 20 необходимых вещей для комфортного отдыха и обучения</p>
           </div>
         </div>
-
-        <div class="swiper-slide">
-          <div class="blog__item" style="background-image: url(images/content/blog-1.jpg);">
-            <div class="container">
-              <div class="blog__text">
-                <h3 class="blog__title">
-                  Что необходимо взять с собой на серф тур
-                </h3>
-                <div class="blog__subtitle">
-                  ТОП 20 необходимых вещей для комфортного отдыха и обучения
-                </div>
-              </div>
-            </div>
+      </li>
+      <li class="swiper-slide blog__slide" style="background-image: url(images/content/blog-1.jpg);">
+        <!-- обёртка для позиционирования -->
+        <div class="blog__item">
+          <div class="blog__text">
+            <h3 class="blog__title">
+              Что необходимо взять с собой на серф тур
+            </h3>
+            <p>ТОП 20 необходимых вещей для комфортного отдыха и обучения</p>
           </div>
         </div>
-
-        <div class="swiper-slide">
-          <div class="blog__item" style="background-image: url(images/content/blog-1.jpg);">
-            <div class="container">
-              <div class="blog__text">
-                <h3 class="blog__title">
-                  Что необходимо взять с собой на серф тур
-                </h3>
-                <div class="blog__subtitle">
-                  ТОП 20 необходимых вещей для комфортного отдыха и обучения
-                </div>
-              </div>
-            </div>
+      </li>
+      <li class="swiper-slide blog__slide" style="background-image: url(images/content/blog-1.jpg);">
+        <!-- обёртка для позиционирования -->
+        <div class="blog__item">
+          <div class="blog__text">
+            <h3 class="blog__title">
+              Что необходимо взять с собой на серф тур
+            </h3>
+            <p>ТОП 20 необходимых вещей для комфортного отдыха и обучения</p>
           </div>
         </div>
-
-        <div class="swiper-slide">
-          <div class="blog__item" style="background-image: url(images/content/blog-1.jpg);">
-            <div class="container">
-              <div class="blog__text">
-                <h3 class="blog__title">
-                  Что необходимо взять с собой на серф тур
-                </h3>
-                <div class="blog__subtitle">
-                  ТОП 20 необходимых вещей для комфортного отдыха и обучения
-                </div>
-              </div>
-            </div>
+      </li>
+      <li class="swiper-slide blog__slide" style="background-image: url(images/content/blog-1.jpg);">
+        <!-- обёртка для позиционирования -->
+        <div class="blog__item">
+          <div class="blog__text">
+            <h3 class="blog__title">
+              Что необходимо взять с собой на серф тур
+            </h3>
+            <p>ТОП 20 необходимых вещей для комфортного отдыха и обучения</p>
           </div>
         </div>
-
-        <div class="swiper-slide">
-          <div class="blog__item" style="background-image: url(images/content/blog-1.jpg);">
-            <div class="container">
-              <div class="blog__text">
-                <h3 class="blog__title">
-                  Что необходимо взять с собой на серф тур
-                </h3>
-                <div class="blog__subtitle">
-                  ТОП 20 необходимых вещей для комфортного отдыха и обучения
-                </div>
-              </div>
-            </div>
+      </li>
+      <li class="swiper-slide blog__slide" style="background-image: url(images/content/blog-1.jpg);">
+        <!-- обёртка для позиционирования -->
+        <div class="blog__item">
+          <div class="blog__text">
+            <h3 class="blog__title">
+              Что необходимо взять с собой на серф тур
+            </h3>
+            <p>ТОП 20 необходимых вещей для комфортного отдыха и обучения</p>
           </div>
         </div>
-
-        <div class="swiper-slide">
-          <div class="blog__item" style="background-image: url(images/content/blog-1.jpg);">
-            <div class="container">
-              <div class="blog__text">
-                <h3 class="blog__title">
-                  Что необходимо взять с собой на серф тур
-                </h3>
-                <div class="blog__subtitle">
-                  ТОП 20 необходимых вещей для комфортного отдыха и обучения
-                </div>
-              </div>
-            </div>
+      </li>
+      <li class="swiper-slide blog__slide" style="background-image: url(images/content/blog-1.jpg);">
+        <!-- обёртка для позиционирования -->
+        <div class="blog__item">
+          <div class="blog__text">
+            <h3 class="blog__title">
+              Что необходимо взять с собой на серф тур
+            </h3>
+            <p>ТОП 20 необходимых вещей для комфортного отдыха и обучения</p>
           </div>
         </div>
-
-        <div class="swiper-slide">
-          <div class="blog__item" style="background-image: url(images/content/blog-1.jpg);">
-            <div class="container">
-              <div class="blog__text">
-                <h3 class="blog__title">
-                  Что необходимо взять с собой на серф тур
-                </h3>
-                <div class="blog__subtitle">
-                  ТОП 20 необходимых вещей для комфортного отдыха и обучения
-                </div>
-              </div>
-            </div>
+      </li>
+      <li class="swiper-slide blog__slide" style="background-image: url(images/content/blog-1.jpg);">
+        <!-- обёртка для позиционирования -->
+        <div class="blog__item">
+          <div class="blog__text">
+            <h3 class="blog__title">
+              Что необходимо взять с собой на серф тур
+            </h3>
+            <p>ТОП 20 необходимых вещей для комфортного отдыха и обучения</p>
           </div>
         </div>
-
-        <div class="swiper-slide">
-          <div class="blog__item" style="background-image: url(images/content/blog-1.jpg);">
-            <div class="container">
-              <div class="blog__text">
-                <h3 class="blog__title">
-                  Что необходимо взять с собой на серф тур
-                </h3>
-                <div class="blog__subtitle">
-                  ТОП 20 необходимых вещей для комфортного отдыха и обучения
-                </div>
-              </div>
-            </div>
+      </li>
+      <li class="swiper-slide blog__slide" style="background-image: url(images/content/blog-1.jpg);">
+        <!-- обёртка для позиционирования -->
+        <div class="blog__item">
+          <div class="blog__text">
+            <h3 class="blog__title">
+              Что необходимо взять с собой на серф тур
+            </h3>
+            <p>ТОП 20 необходимых вещей для комфортного отдыха и обучения</p>
           </div>
         </div>
-
-        <div class="swiper-slide">
-          <div class="blog__item" style="background-image: url(images/content/blog-1.jpg);">
-            <div class="container">
-              <div class="blog__text">
-                <h3 class="blog__title">
-                  Что необходимо взять с собой на серф тур
-                </h3>
-                <div class="blog__subtitle">
-                  ТОП 20 необходимых вещей для комфортного отдыха и обучения
-                </div>
-              </div>
-            </div>
+      </li>
+      <li class="swiper-slide blog__slide" style="background-image: url(images/content/blog-1.jpg);">
+        <!-- обёртка для позиционирования -->
+        <div class="blog__item">
+          <div class="blog__text">
+            <h3 class="blog__title">
+              Что необходимо взять с собой на серф тур
+            </h3>
+            <p>ТОП 20 необходимых вещей для комфортного отдыха и обучения</p>
           </div>
         </div>
-        <!-- If we need pagination -->
-      </div>
-      <div class="swiper-pagination blog__pagination"></div>
-    </div>
+      </li>
+    </ul>
+    <div class="swiper-pagination"></div>
+  </div>
 </section>
 
 <!-- end blog -->
@@ -501,7 +468,7 @@
   <div class="container">
     <h2 class="title">
       Наша команда
-    </h2>>
+    </h2>
     <div class="team__inner">
       <ul class="team__list">
         <li class="team__item-body">
@@ -561,7 +528,7 @@
   <div class="container">
     <h2 class="title">
       Пакеты услуг
-    </h2>>
+    </h2>
     <div class="service__inner">
       <div class="service__card-body">
         <div class="service__card">
@@ -691,7 +658,7 @@
   <div class="container">
     <h2 class="title">
       Оставить Заявку
-    </h2>>
+    </h2>
 
     <div class="submit__inner">
       <div class="submit__item submit__item--form">

@@ -92,9 +92,6 @@ body._lock {
 }
 
 .btn {
-  max-width: 350px;
-  width: 100%;
-  padding: 21px 0;
   background-color: transparent;
   border: 1px solid #C4C4C4;
   @include adaptiv-font(24, 16);
