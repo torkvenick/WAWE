@@ -1,5 +1,5 @@
 .blog {
-  @include adaptiv-value("padding-top", 200, 80, 0);
+  @include adaptiv-value("padding-top", 170, 80, 0);
 
   &__container {
     @include adaptiv-value("padding-top", 130, 0, 0);
