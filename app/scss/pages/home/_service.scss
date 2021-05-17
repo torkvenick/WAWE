@@ -1,5 +1,6 @@
+/* start section service */
 .service {
-  @include adaptiv-value("padding-top", 190, 50, 0);
+  @include adaptiv-value("padding-top", 200, 50, 0);
   @include adaptiv-value("padding-bottom", 170, 20, 0);
   background-color: $bg;
 
@@ -7,60 +8,75 @@
     @include adaptiv-value("padding-top", 100, 0, 0);
     display: flex;
     justify-content: space-between;
-    @media (max-width: 767px) {
+
+    @media (max-width: $r-md) {
       flex-wrap: wrap;
+      justify-content: space-around;
     }
   }
-
-  &__card-body {
-    padding: 0 15px;
-    margin: 0 0 30px 0;
-    @media (max-width: 767px) {
-     width: 100%;
-    }
-  }
-  
-  &__card {
-    height: 100%;
-    @include adaptiv-value("padding-top", 45, 20, 0);
-    @include adaptiv-value("padding-bottom", 45, 20, 0);
-    padding-right: 30px;
-    padding-left: 30px;
-    display: flex;
-    flex: 0 1 100%;
-    flex-direction: column;
-    background-color: #fff;
-    text-align: center;
-    font-weight: 400;
-  }
-
 
   &__title {
-    @include adaptiv-value("margin-bottom", 50, 25, 0);
-    font-size: 36px;
-    line-height: 1.17;
+    @include adaptiv-value("margin-bottom", 110, 50, 0);
   }
-  
+
+  &__card {
+    margin-bottom: 30px;
+    padding: 50px 30px 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 1 30%;
+    background-color: #fff;
+    text-align: center;
+
+    @media (max-width: $r-md) {
+      flex: 0 1 48%;
+    }
+
+    @media (max-width: $r-sm) {
+      flex: 0 1 80%;
+    }
+
+    @media (max-width: $r-xsm) {
+      /* негативный margin для более приятного отображения карточки на всю ширину + чтобы не трогать container */
+      margin: 0 -20px 30px;
+      flex: 1 1 100%;
+    }
+  }
+
+  &__subtitle {
+    margin: 0 0 60px 0;
+    /* у меня в global прописаны стили для стандартного текста. на карточке видно, что заголовок и цена имеют одинаковые стили. Я продублировал стили и там и там, потому что если самой карточке прописать стили заголовка и цены, текст тоже становиться большим и более жирным, и ему нужно прописывать те самые стили из global, что немного странно для меня.  */
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.1;
+  }
+
   &__list {
     margin-bottom: auto;
-    @media (min-width: 1023px) {
-         text-align: left;
-     }
-  }
-  
 
-  &__item {
-    @include adaptiv-value("margin-bottom", 20, 15, 0);
+    li {
+      text-align: left;
+      margin: 0 0 20px 0;
+
+      @media (max-width: $r-sm) {
+        text-align: center;
+      }
+    }
   }
-  
+
   &__price {
-    @include adaptiv-value("margin-top", 40, 10, 0);
+    /* margin-top выставлен, потому что у service__card применён display:flex */
+    margin-top: 40px;
+    font-weight: 400;
     font-size: 36px;
-    line-height: 1.17;
-    color: #01353E;
+    line-height: 1.1;
   }
 
   &__symbol {
     vertical-align: middle;
+    font-size: 18px;
+    line-height: 1.2;
   }
 }
+/* end section service */
