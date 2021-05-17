@@ -258,13 +258,14 @@
 <!-- end Gallery -->
       <!-- start Motivation -->
 <section class="motivation">
-  <figure class="quote">
-    <blockquote class="quote__text">
-      <p>«Если сомневаешься – иди катайся.»</p>
-      <figcaption>Нэт Янг, первый Чемпион Мира по сёрфингу</figcaption>
-    </blockquote>
-  </figure>
   <div class="container">
+    <figure class="quote">
+      <blockquote class="quote__text">
+        <p>«Если сомневаешься – иди катайся.»</p>
+        <!-- нужно ли прописывать класс figcaption? На всякий случай прописал -->
+        <figcaption class="quote__author">Нэт Янг, первый Чемпион Мира по сёрфингу</figcaption>
+      </blockquote>
+    </figure>
     <div class="video" style="background-image: url(images/content/video.jpg);">
       <a class="video__popup" href="https://www.youtube.com/watch?v=MySzJoo1Reo"></a>
     </div>
@@ -424,55 +425,33 @@
 
 <section class="team" id="team">
   <div class="container">
-    <h2 class="title">
+    <h2 class="title team__title">
       Наша команда
     </h2>
     <div class="team__inner">
       <ul class="team__list">
-        <li class="team__item-body">
-          <div class="team__item">
-            <div class="team__image-body">
-              <img class="team__image" src="images/content/team-1.jpg" alt="Mike">
-            </div>
-            <div class="team__text">
-              <h3 class="team__name">
-                Mike
-              </h3>
-              <div class="team__post">
-                Главный инструктор
-              </div>
-            </div>
-          </div>
+        <li class="team__item">
+          <img class="team__img" src="images/content/team-1.jpg" alt="Mike">
+          <h3 class="team__name">
+            Mike
+          </h3>
+          <p>Главный инструктор</p>
         </li>
-        <li class="team__item-body">
-          <div class="team__item">
-            <div class="team__image-body">
-              <img class="team__image" src="images/content/team-2.jpg" alt="Mary">
-            </div>
-            <div class="team__text">
-              <h3 class="team__name">
-                Mary
-              </h3>
-              <div class="team__post">
-                Инструктор
-              </div>
-            </div>
-          </div>
+        
+        <li class="team__item">
+          <img class="team__img" src="images/content/team-2.jpg" alt="Mike">
+          <h3 class="team__name">
+            Mary
+          </h3>
+          <p>Инструктор</p>
         </li>
-        <li class="team__item-body">
-          <div class="team__item">
-            <div class="team__image-body">
-              <img class="team__image" src="images/content/team-3.jpg" alt="Ольга">
-            </div>
-            <div class="team__text">
-              <h3 class="team__name">
-                Ольга
-              </h3>
-              <div class="team__post">
-                Инструктор
-              </div>
-            </div>
-          </div>
+
+        <li class="team__item">
+          <img class="team__img" src="images/content/team-3.jpg" alt="Mike">
+          <h3 class="team__name">
+            Ольга
+          </h3>
+          <p>Инструктор</p>
         </li>
       </ul>
     </div>

@@ -13,13 +13,13 @@
     font-weight: 400;
     font-style: italic;
 
-    figcaption {
-      @include adaptiv-font(14, 12);
-      transform: translateX(15%);
-
-      @media (max-width: $r-sm) {
-        transform: none;
-      }
+  }
+  &__author {
+    @include adaptiv-font(14, 12);
+    max-width: 50%;
+    margin-left: auto;
+    @media (max-width: $r-sm) {
+      max-width: 100%;
     }
   }
 }
