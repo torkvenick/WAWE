@@ -1,8 +1,0 @@
-.map {
-  @include adaptiv-value("padding-top", 200, 50, 0);
-  @include adaptiv-value("padding-bottom", 200, 50, 0);
-  
-  &__location {
-    @include adaptiv-value("height", 640, 200, 0);
-  }
-}

@@ -47,6 +47,7 @@
     }
 
     &:hover {
+
       &::before,
       &::after,
       span {
@@ -159,6 +160,11 @@
     position: relative;
     transition: color 0.2s;
 
+    @media (max-width: $r-md) {
+      &:hover {
+        color: $green;
+      }
+    }
     &::before {
       content: "";
       width: 0;
@@ -170,12 +176,13 @@
       transition: all 0.5s;
     }
 
-    @media (min-width: 1024px) {
-      &:hover {
-        &::before {
-          width: 100%;
-          right: 0;
-          left: auto;
+    &:hover {
+      &::before {
+        width: 100%;
+        right: 0;
+        left: auto;
+        @media (max-width: $r-md) {
+          width: 0;
         }
       }
     }
