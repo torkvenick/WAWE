@@ -17,7 +17,6 @@
   }
 
   &__inner {
-    @include adaptiv-value("margin-top", 130, 0, 0);
     @include adaptiv-value("margin-bottom", 200, 50, 0);
     display: flex;
     flex-wrap: wrap;
@@ -53,6 +52,21 @@
         margin-bottom: 0;
       }
     }
+
+    a {
+      outline: transparent;
+      &:focus {
+        transform: scale(0.95);
+      }
+
+      &:hover {
+        color: $green;
+      }
+
+      &:active {
+        color: $green;
+      }
+    }
   }
 
   &__question {
@@ -61,6 +75,7 @@
 
   &__tel {
     display: block;
+    transition: all 0.3s;
   }
 }
 
@@ -90,17 +105,28 @@
     font-weight: 400;
     color: $text;
     outline: transparent;
+    transition: all 0.3s;
 
     @media (max-width: $r-xsm) {
       padding-left: 10px;
     }
 
-    &::placeholder {
-      color: $green;
+    &:focus {
+      &::placeholder {
+        color: transparent;
+      }
     }
 
-    &:focus::placeholder {
-      color: transparent;
+    &:hover {
+      border-color: $green;
+    }
+
+    &:active {
+      border-color: #000;
+    }
+
+    &::placeholder {
+      color: $green;
     }
 
     &--phone {
@@ -119,10 +145,24 @@
 
   &__btn {
     @include btn-size;
+    transition: all .3s;
 
     @media (max-width: $r-sm) {
       max-width: 300px;
       margin: 0 auto;
+    }
+
+    &:focus {
+      border-color: $green;
+      box-shadow: inset 0px 0px 3px 1px $green;
+    }
+
+    &:hover {
+      box-shadow: inset 0px 0px 3px 1px $green;
+    }
+    
+    &:active {
+      transform: scale(0.9);
     }
   }
 }
@@ -137,10 +177,21 @@
   li {
     margin-right: 10px;
     display: inline-block;
-    transition: color 0.3s;
+  }
+
+  a {
+    transition: all 0.3s;
+    outline: transparent;
+    &:focus {
+      color: $green;
+    }
 
     &:hover {
       color: $green;
+    }
+
+    &:active {
+      box-shadow: 0 2px 3px 0px $green;
     }
   }
 }
