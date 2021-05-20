@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,682 +9,651 @@
 </head>
 
 <body>
+ 
 
+<!-- Оболочка -->
+<div class="wrapper">
+  <div class="content">
+    <!-- start header -->
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <nav class="menu" id="menu">
+        <a class="logo header__logo" href="#intro">
+          <img class="logo__img" src="images/logo.svg" alt="logo">
+          Logo
+        </a>
+        <button class="menu__btn" type="button">
+          <span></span>
+          <span class="sr-only">Menu</span>
+        </button>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#about">
+              О нас
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#benefits">
+              Услуги
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#service">
+              Стоимость
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#blog">
+              Блог
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#team">
+              Команда
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#submit">
+              Контакты
+            </a>
+          </li>
+        </ul>
+      </nav>
 
-  <!-- Оболочка -->
-  <div class="wrapper">
-    <div class="content">
-      <!-- start header -->
-      <header class="header">
-        <div class="container">
-          <div class="header__inner">
-            <nav class="menu" id="menu">
-              <a class="logo header__logo" href="#intro">
-                <img class="logo__img" src="images/logo.svg" alt="logo">
-                Logo
-              </a>
-              <button class="menu__btn" type="button">
-                <span></span>
-                <span class="sr-only">Menu</span>
-              </button>
-              <ul class="menu__list">
-                <li class="menu__item">
-                  <a class="menu__link" href="#about">
-                    О нас
-                  </a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="#benefits">
-                    Услуги
-                  </a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="#service">
-                    Стоимость
-                  </a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="#blog">
-                    Блог
-                  </a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="#team">
-                    Команда
-                  </a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="#submit">
-                    Контакты
-                  </a>
-                </li>
-              </ul>
-            </nav>
-
-          </div>
-        </div>
-      </header>
-
-      <!-- end header -->
-
-      <main class="main">
-        <!-- start intro -->
-        <!-- I think this section should be fullscreen/Думаю, что секция должна быть фуллскрин, поэтому есть расхождение с Pixel Perfect -->
-        <section class="intro" id="intro" style="background-image: url(images/bg-intro.jpg);">
-          <div class="container">
-            <div class="intro__inner">
-              <h1 class="intro__title">
-                Wawe
-              </h1>
-              <p class="intro__text">
-                Школа серфинга на канарских Островах
-              </p>
-            </div>
-            <!-- intro__icon - обертка, чтобы не писать в js отдельно функцию для прокрутки при нажатии на иконку. Так решил сэкономить код. Надеюсь, так можно -->
-            <div class="intro__icon" id="introIcon">
-              <a class="intro__svg" href="#about"></a>
-            </div>
-          </div>
-        </section>
-        <!-- end intro -->
-        <!-- start about -->
-
-        <section class="about" id="about">
-          <div class="container">
-            <h2 class="title">
-              О школе, о серфинге, о Канарах
-            </h2>
-            <div class="about__inner">
-              <p>Канарские острова не случайно называют европейскими Гавайями – это идеальное место для поклонников
-                серфинга: стабильный теплый ветер круглый год, песчаные пляжи, километры нетронутых просторов и
-                прозрачное море. А настоящей Меккой для серфингистов становится Фуэртевентура – второй по величине
-                остров архипелага.</p>
-
-              <p>Пока что вы только хотите понять, что такое серфинг, или уже испытали всю прелесть катания на волнах,
-                но желаете поднять свой уровень? Наша школа серфинга сможет предложить обучение для любого уровня
-                подготовки.</p>
-
-              <p>Именно здесь лучшее в Испании место, в котором можно пройти обучение серфингу. Кроме того, что зимой и
-                осенью сюда приходят огромные атлантические волны, Фуэртевентура может похвастать и множеством
-                мелководных спокойных лагун, отлично подходящих для обучения начинающих серфингистов.</p>
-
-              <p>Четыре часа увлекательных занятий в день помогут вам уверенно покорять волны, почувствовать себя
-                настоящим серфингистом.</p>
-
-              <p>Серфинг на Канарских островах доступен круглый год – и волны, и подходящая погода здесь есть всегда.
-                Причем волну, подходящую по уровню, сможет найти и настоящий профи, и новичок. Не случайно считается,
-                что именно это место лучше всего подойдет для обучения здесь возможно без сложностей переходить на новый
-                уровень.</p>
-
-              <p>Основные достоинства нашей русской школы – высокое качество преподавания и организации занятий,
-                безопасность (все наши клиенты застрахованы в компании Allianz), отличный инвентарь и экипировка
-                (предоставляется на весь курс обучения), в том числе мягкие безопасные доски для начинающих.</p>
-
-              <p>Перечисляя достоинства, нельзя обойти и то, что пляжи Фуэртевентуры самые протяженные на Канарах. В
-                итоге невозможно представить их переполненных туристами. Вы столкнетесь только с теми, кого,как и вас,
-                будет интересовать одна цель – обучение серфингу.</p>
-
-              <p>Сначала мы определяем уровень катания и физической подготовки и только потом составляем программу
-                подготовки. И можем заверить, что после того, как закончится обучение, вы не только получите массу
-                великолепных ощущений, но и это уровень поднимется на новую ступень.</p>
-            </div>
-          </div>
-        </section>
-
-        <!-- end about -->
-
-        <!-- Start benefits -->
-        <section class="benefits" id="benefits">
-          <div class="container">
-            <h2 class="title">
-              В школе вы получите
-            </h2>
-            <ul class="benefits__items">
-              <li class="benefits__item">
-                <h3 class="benefits__title benefits__title--1">Проживание</h3>
-                <p>Наша школа серфинга находится в 100 м от океанского побережья. К услугам гостей открытый бассейн и
-                  бесплатный Wi-Fi. Из верхней террасы открывается вид на океан. Расстояние до центра города 15 мин.</p>
-              </li>
-              <li class="benefits__item">
-                <h3 class="benefits__title benefits__title--2">Перелет и страховку</h3>
-                <p>Все участники программы застрахованы страховой компанией Allianz.</p>
-                <p>Перелет из Тенерифе до острова Лансароте и обратно входит в стоимость программы</p>
-              </li>
-              <li class="benefits__item">
-                <h3 class="benefits__title benefits__title--3">Обучение и экипировку</h3>
-                <p>Все оборудование и экипировка известных производителей и предоставляется на весь курс программы.
-                  Тренировочный процесс начинается с определения вашего уровня катания</p>
-              </li>
-            </ul>
-            <div class="benefits__info">
-              <ul class="benefits__stats">
-                <li class="benefits__stat benefits__stat--1">
-                  <span>85%</span>
-                  <p class="benefits__result">
-                    Приехали второй раз
-                  </p>
-                </li>
-
-                <li class="benefits__stat benefits__stat--2">
-                  <span>95%</span>
-                  <p class="benefits__result">
-                    Научились кататься
-                  </p>
-                </li>
-
-                <li class="benefits__stat benefits__stat--3">
-                  <span>99%</span>
-                  <p class="benefits__result">
-                    Довольных клиентов
-                  </p>
-                </li>
-              </ul>
-              <div class="benefits__description">
-                <p>Огромным преимуществом нашей школы является собственная методика обучения. Мы разработали собственный
-                  стиль обучения серфингу, который позволяет новичкам максимально быстро встать на доску.</p>
-                <p>Именно наша методика и наши преподаватели позволили нам пройти аттестацию Федерации серфинга
-                  Канарских островов - FEDERACIÓN CANARIA DE SURF. Это означает, что наша школа соответствует всем
-                  мировым стандартам. Переаттестация производится ежегодно и это позволяет нам всегда стремиться к
-                  улучшению обучения.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- End benefits -->
-        <section class="achieve">
-          <!-- обёртка, чтобы блок с текстом оставался на своем месте и картинка на него не налезала -->
-          <div class="achieve__content">
-            <div class="container">
-              <div class="achieve__inner">
-                <h2 class="title achieve__title">
-                  Покоряй вершины
-                </h2>
-                <div class="achieve__text">
-                  <p>Преподаватели нашей школы серфинга в числе лучших серферов на Канарских островах. Среди них -
-                    чемпион
-                    Европы
-                    по лонгборду, который с радостью поделится опытом как с новичками, так и более опытными серферами.
-                    Все члены преподавательского состава являются сертифицированными членами Федерации серфинга
-                    Канарских
-                    островов. Некоторые из них знают русский язык, что определенно позиционирует нас как русскую школу
-                    серфинга
-                    за границей!</p>
-                  <p>Весь тренерский состав регулярно участвует в семинарах и курсах повышения квалификации, которые
-                    проводятся
-                    по всему миру различными известными серф-клубами и федерациями. Поэтому в нашей школе серфинга вы
-                    можете
-                    быть спокойны: вас обучают лучшие тренеры!</p>
-                  <p>Методика обучения серфингу рассчитана как на новичков, на серферов среднего уровня, так и на
-                    серферов
-                    уровня
-                    ТОП. Тренеры находят подход к каждому, несмотря на то, что обучение серфингу в нашей школе
-                    производится в
-                    группах. Однако, мы предлагаем персональные уроки серфинга - только вы и тренер!</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="achieve__image" style="background-image: url(images/content/achieve-img.jpg);"></div>
-        </section>
-        <!-- end achieve -->
-        <!-- start Gallery -->
-
-        <section class="gallery">
-          <div class="container">
-            <h2 class="title gallery__title">Галерея</h2>
-            <div class="gallery__inner">
-              <ul class="gallery__btns">
-                <li>
-                  <button type="button" data-filter="all">Все</button>
-                </li>
-                <li>
-                  <button type="button" data-filter=".category-tourists">Туристы</button>
-                </li>
-                <li>
-                  <button type="button" data-filter=".category-nature">Природа</button>
-                </li>
-                <li>
-                  <button type="button" data-filter=".category-prof">Профи</button>
-                </li>
-              </ul>
-
-              <ul class="gallery__items">
-                <li>
-                  <a class="mix category-prof" data-order="1" href="images/content/gallery-1.jpg">
-                    <img src="images/content/gallery-1.jpg" alt="surfGuy">
-                  </a>
-                </li>
-                <li>
-                  <a class="mix category-tourists" data-order="2" href="images/content/gallery-2.jpg">
-                    <img src="images/content/gallery-2.jpg" alt="baby on board">
-                  </a>
-                </li>
-                <li>
-                  <a class="mix category-prof" data-order="3" href="images/content/gallery-3.jpg">
-                    <img src="images/content/gallery-3.jpg" alt="man with surfboard">
-                  </a>
-                </li>
-                <li>
-                  <a class="mix category-tourists" data-order="4" href="images/content/gallery-4.jpg">
-                    <img src="images/content/gallery-4.jpg" alt="surfing women">
-                  </a>
-                </li>
-                <li>
-                  <a class="mix category-nature" data-order="5" href="images/content/gallery-5.jpg">
-                    <img src="images/content/gallery-5.jpg" alt="wave">
-                  </a>
-                </li>
-                <li>
-                  <a class="mix category-nature" data-order="6" href="images/content/gallery-6.jpg">
-                    <img src="images/content/gallery-6.jpg" alt="girl with surfboard">
-                  </a>
-                </li>
-              </ul>
-              <button class="btn gallery__more" type="button">Показать еще</button>
-            </div>
-          </div>
-        </section>
-
-        <!-- end Gallery -->
-        <!-- start Motivation -->
-        <section class="motivation">
-          <figure class="quote">
-            <blockquote class="quote__text">
-              <p>«Если сомневаешься – иди катайся.»</p>
-              <!-- нужно ли прописывать класс figcaption? На всякий случай прописал -->
-              <figcaption class="quote__author">Нэт Янг, первый Чемпион Мира по сёрфингу</figcaption>
-            </blockquote>
-          </figure>
-          <div class="container">
-            <div class="video" style="background-image: url(images/content/video.jpg);">
-              <a class="video__popup" href="https://www.youtube.com/watch?v=MySzJoo1Reo"></a>
-            </div>
-            <div class="stats">
-              <ul class="stats__list">
-                <li>
-                  <h3>450</h3>
-                  <p>туристов</p>
-                </li>
-                <li>
-                  <h3>2500</h3>
-                  <p>часов катания</p>
-                </li>
-                <li>
-                  <h3>10</h3>
-                  <p>проф. тренеров</p>
-                </li>
-                <li>
-                  <h3>365</h3>
-                  <p>дней в году</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-        <!-- end Motivation -->
-        <!-- start blog -->
-
-        <section class="blog" id="blog">
-          <h2 class="title">
-            Блог
-          </h2>
-          <!-- Slider main container -->
-          <div class="blog__container">
-            <!-- Additional required wrapper -->
-            <ul class="swiper-wrapper blog__wrapper">
-              <!-- Slides -->
-
-              <li class="swiper-slide blog__slide" style="background-image: url(images/content/blog-1.jpg);">
-                <!-- обёртка для позиционирования -->
-                <div class="blog__item">
-                  <div class="blog__text">
-                    <h3 class="blog__title">
-                      Что необходимо взять с собой на серф тур
-                    </h3>
-                    <p>ТОП 20 необходимых вещей для комфортного отдыха и обучения</p>
-                  </div>
-                </div>
-              </li>
-
-              <li class="swiper-slide blog__slide" style="background-image: url(images/content/blog-1.jpg);">
-                <!-- обёртка для позиционирования -->
-                <div class="blog__item">
-                  <div class="blog__text">
-                    <h3 class="blog__title">
-                      Что необходимо взять с собой на серф тур
-                    </h3>
-                    <p>ТОП 20 необходимых вещей для комфортного отдыха и обучения</p>
-                  </div>
-                </div>
-              </li>
-              <li class="swiper-slide blog__slide" style="background-image: url(images/content/blog-1.jpg);">
-                <!-- обёртка для позиционирования -->
-                <div class="blog__item">
-                  <div class="blog__text">
-                    <h3 class="blog__title">
-                      Что необходимо взять с собой на серф тур
-                    </h3>
-                    <p>ТОП 20 необходимых вещей для комфортного отдыха и обучения</p>
-                  </div>
-                </div>
-              </li>
-              <li class="swiper-slide blog__slide" style="background-image: url(images/content/blog-1.jpg);">
-                <!-- обёртка для позиционирования -->
-                <div class="blog__item">
-                  <div class="blog__text">
-                    <h3 class="blog__title">
-                      Что необходимо взять с собой на серф тур
-                    </h3>
-                    <p>ТОП 20 необходимых вещей для комфортного отдыха и обучения</p>
-                  </div>
-                </div>
-              </li>
-              <li class="swiper-slide blog__slide" style="background-image: url(images/content/blog-1.jpg);">
-                <!-- обёртка для позиционирования -->
-                <div class="blog__item">
-                  <div class="blog__text">
-                    <h3 class="blog__title">
-                      Что необходимо взять с собой на серф тур
-                    </h3>
-                    <p>ТОП 20 необходимых вещей для комфортного отдыха и обучения</p>
-                  </div>
-                </div>
-              </li>
-              <li class="swiper-slide blog__slide" style="background-image: url(images/content/blog-1.jpg);">
-                <!-- обёртка для позиционирования -->
-                <div class="blog__item">
-                  <div class="blog__text">
-                    <h3 class="blog__title">
-                      Что необходимо взять с собой на серф тур
-                    </h3>
-                    <p>ТОП 20 необходимых вещей для комфортного отдыха и обучения</p>
-                  </div>
-                </div>
-              </li>
-              <li class="swiper-slide blog__slide" style="background-image: url(images/content/blog-1.jpg);">
-                <!-- обёртка для позиционирования -->
-                <div class="blog__item">
-                  <div class="blog__text">
-                    <h3 class="blog__title">
-                      Что необходимо взять с собой на серф тур
-                    </h3>
-                    <p>ТОП 20 необходимых вещей для комфортного отдыха и обучения</p>
-                  </div>
-                </div>
-              </li>
-              <li class="swiper-slide blog__slide" style="background-image: url(images/content/blog-1.jpg);">
-                <!-- обёртка для позиционирования -->
-                <div class="blog__item">
-                  <div class="blog__text">
-                    <h3 class="blog__title">
-                      Что необходимо взять с собой на серф тур
-                    </h3>
-                    <p>ТОП 20 необходимых вещей для комфортного отдыха и обучения</p>
-                  </div>
-                </div>
-              </li>
-              <li class="swiper-slide blog__slide" style="background-image: url(images/content/blog-1.jpg);">
-                <!-- обёртка для позиционирования -->
-                <div class="blog__item">
-                  <div class="blog__text">
-                    <h3 class="blog__title">
-                      Что необходимо взять с собой на серф тур
-                    </h3>
-                    <p>ТОП 20 необходимых вещей для комфортного отдыха и обучения</p>
-                  </div>
-                </div>
-              </li>
-              <li class="swiper-slide blog__slide" style="background-image: url(images/content/blog-1.jpg);">
-                <!-- обёртка для позиционирования -->
-                <div class="blog__item">
-                  <div class="blog__text">
-                    <h3 class="blog__title">
-                      Что необходимо взять с собой на серф тур
-                    </h3>
-                    <p>ТОП 20 необходимых вещей для комфортного отдыха и обучения</p>
-                  </div>
-                </div>
-              </li>
-            </ul>
-            <div class="swiper-pagination"></div>
-          </div>
-        </section>
-
-        <!-- end blog -->
-        <!-- start team -->
-
-        <section class="team" id="team">
-          <div class="container">
-            <h2 class="title team__title">
-              Наша команда
-            </h2>
-            <div class="team__inner">
-              <ul class="team__list">
-                <li class="team__item">
-                  <img class="team__img" src="images/content/team-1.jpg" alt="Mike">
-                  <h3 class="team__name">
-                    Mike
-                  </h3>
-                  <p>Главный инструктор</p>
-                </li>
-
-                <li class="team__item">
-                  <img class="team__img" src="images/content/team-2.jpg" alt="Mike">
-                  <h3 class="team__name">
-                    Mary
-                  </h3>
-                  <p>Инструктор</p>
-                </li>
-
-                <li class="team__item">
-                  <img class="team__img" src="images/content/team-3.jpg" alt="Mike">
-                  <h3 class="team__name">
-                    Ольга
-                  </h3>
-                  <p>Инструктор</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <!-- end team -->
-        <!-- start service -->
-        <section class="service" id="service">
-          <div class="container">
-            <h2 class="title service__title">
-              Пакеты услуг
-            </h2>
-            <!-- Однотипные элементы сделаны списком. Сложные классы убраны -->
-            <ul class="service__inner">
-              <li class="service__card">
-                <h3 class="service__subtitle">
-                  Стандарт
-                </h3>
-                <ul class="service__list">
-                  <li>
-                    Проживание на вилле 6 ночей
-                  </li>
-                  <li>
-                    Экипировка для обучения
-                  </li>
-                  <li>
-                    Номер категории стандарт
-                  </li>
-                  <li>
-                    Обучение серфингу 5 тренировок по 2 часа
-                  </li>
-                  <li>
-                    Страховка
-                  </li>
-                  <li>
-                    Вечеринка с угощениями и дискотекой
-                  </li>
-                </ul>
-                <p class="service__price">
-                  450 <span class="service__symbol">$</span>
-                </p>
-              </li>
-
-              <li class="service__card">
-                <h3 class="service__subtitle">
-                  Все включено
-                </h3>
-                <ul class="service__list">
-                  <li>
-                    Проживание на вилле 6 ночей
-                  </li>
-                  <li>
-                    Номер категории люкс
-                  </li>
-                  <li>
-                    Экипировка для обучения
-                  </li>
-                  <li>
-                    Обучение серфингу 8 тренировок по 2 часа
-                  </li>
-                  <li>
-                    Страховка
-                  </li>
-                  <li>
-                    Вечеринка с угощениями и дискотекой
-                  </li>
-                  <li>
-                    Авиа перелет Тенерифе -Лансароте - Тенерифе
-                  </li>
-                  <li>
-                    Завтраки на вилле
-                  </li>
-                </ul>
-                <p class="service__price">
-                  950 <span class="service__symbol">$</span>
-                </p>
-              </li>
-
-              <li class="service__card">
-                <h3 class="service__subtitle">
-                  Профи
-                </h3>
-                <ul class="service__list">
-                  <li>
-                    Проживание на вилле 8 ночей
-                  </li>
-                  <li>
-                    Номер категории люкс
-                  </li>
-                  <li>
-                    Экипировка для обучения
-                  </li>
-                  <li>
-                    Обучение серфингу 16 тренировок по 2 часа
-                  </li>
-                  <li>
-                    Страховка
-                  </li>
-                  <li>
-                    Вечеринка с угощениями и дискотекой
-                  </li>
-                  <li>
-                    Авиа перелет Тенерифе -Лансароте - Тенерифе
-                  </li>
-                  <li>
-                    Завтраки и ужины на вилле
-                  </li>
-                </ul>
-                <p class="service__price">
-                  1450 <span class="service__symbol">$</span>
-                </p>
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- end service -->
-        <section class="submit" id="submit">
-          <div class="submit__map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111645.62053955902!2d-13.699570180966939!3d29.019191183502876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc461feaa491cbb9%3A0x9172ff7d6432307f!2zMzU1NTgg0JrQsNC70LXRgtCwINC00LUg0KTQsNC80LDRgNCwLCDQm9Cw0YEt0J_QsNC70YzQvNCw0YEsINCY0YHQv9Cw0L3QuNGP!5e0!3m2!1sru!2snl!4v1619047783535!5m2!1sru!2snl"
-              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-          </div>
-          <div class="container">
-            <h2 class="title submit__title">
-              Оставить Заявку
-            </h2>
-
-            <div class="submit__inner">
-              <form class="form" id="contact" action="#">
-                <label for="formName">
-                  <span class="sr-only">Name</span>
-                </label>
-                <input type="text" class="form__input" id="formName" name="formName" placeholder="Имя">
-
-                <label for="formPhone">
-                  <span class="sr-only">Telephone</span>
-                </label>
-                <input type="tel" class="form__input form__input--phone" id="formPhone" name="formPhone"
-                  placeholder="Телефон" pattern="+[0-9]{11}">
-
-                <label for="formMessage">
-                  <span class="sr-only">Leave Message</span>
-                </label>
-                <textarea class="form__input form__input--message" name="formMessage" id="formMessage" rows="8"
-                  maxlength="350" placeholder="Оставьте сообщение, и мы свяжемся с Вами в ближайшее время"></textarea>
-
-                <!-- Что более корректно для примиксовки: submit__btn или form__btn? -->
-                <button class="btn form__btn" type="submit">
-                  Отправить
-                </button>
-              </form>
-
-              <address class="submit__address">
-                <p>Есть вопрос?
-                  <!-- странноватый параграф. Как вариант, задал спану класс, чтобы перенести на другую строку. Или же можно сделать строчку отдельным параграфом и тоже задать класс -->
-                  <span class="submit__question">Вы можете связаться с нами:</span>
-                </p>
-                <p>WhatsApp, Viber, Telegram
-                  <a class="submit__tel" href="tel:+34674863788">+3 467 486-37-88</a>
-                </p>
-                <p>Avenida grandes playas 79,
-                  Corralejo la Oliva Fuerteventura,
-                  Spain. 35660
-                </p>
-              </address>
-            </div>
-
-            <ul class="social">
-              <li>
-                <a href="#">Instagram</a>
-              </li>
-              <li>
-                <a href="#">Facebook</a>
-              </li>
-              <li>
-                <a href="#">Youtube</a>
-              </li>
-            </ul>
-          </div>
-        </section>
-      </main>
     </div>
-    <!-- start footer -->
+  </div>
+</header>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__inner">
-          <a class="logo" href="#">
-            <img class="logo__img" src="images/logo.svg" alt="logo">
-            Logo
-          </a>
+<!-- end header -->
+    <main class="main">
+      <!-- start intro -->
+<!-- I think this section should be fullscreen/Думаю, что секция должна быть фуллскрин, поэтому есть расхождение с Pixel Perfect -->
+<section class="intro" id="intro" style="background-image: url(images/bg-intro.jpg);">
+  <div class="container">
+    <div class="intro__inner">
+      <h1 class="intro__title">
+        Wawe
+      </h1>
+      <p class="intro__text">
+        Школа серфинга на канарских Островах
+      </p>
+    </div>
+    <!-- intro__icon - обертка, чтобы не писать в js отдельно функцию для прокрутки при нажатии на иконку. Так решил сэкономить код. Надеюсь, так можно -->
+    <div class="intro__icon" id="introIcon">
+      <a class="intro__svg" href="#about"></a>   
+    </div>
+  </div>
+</section>
+<!-- end intro -->
+      <!-- start about -->
+
+<section class="about" id="about">
+  <div class="container">
+    <h2 class="title">
+      О школе, о серфинге, о Канарах
+    </h2>
+    <div class="about__inner">
+        <p>Канарские острова не случайно называют европейскими Гавайями – это идеальное место для поклонников серфинга: стабильный теплый ветер круглый год, песчаные пляжи, километры нетронутых просторов и прозрачное море. А настоящей Меккой для серфингистов становится Фуэртевентура – второй по величине остров архипелага.</p>
+        
+        <p>Пока что вы только хотите понять, что такое серфинг, или уже испытали всю прелесть катания на волнах, но желаете поднять свой уровень? Наша школа серфинга сможет предложить обучение для любого уровня подготовки.</p>
+
+        <p>Именно здесь лучшее в Испании место, в котором можно пройти обучение серфингу. Кроме того, что зимой и осенью сюда приходят огромные атлантические волны, Фуэртевентура может похвастать и множеством мелководных спокойных лагун, отлично подходящих для обучения начинающих серфингистов.</p>
+        
+        <p>Четыре часа увлекательных занятий в день помогут вам уверенно покорять волны, почувствовать себя настоящим серфингистом.</p>
+        
+        <p>Серфинг на Канарских островах доступен круглый год – и волны, и подходящая погода здесь есть всегда. Причем волну, подходящую по уровню, сможет найти и настоящий профи, и новичок. Не случайно считается, что именно это место лучше всего подойдет для обучения здесь возможно без сложностей переходить на новый уровень.</p>
+
+        <p>Основные достоинства нашей русской школы – высокое качество преподавания и организации занятий, безопасность (все наши клиенты застрахованы в компании Allianz), отличный инвентарь и экипировка (предоставляется на весь курс обучения), в том числе мягкие безопасные доски для начинающих.</p>
+        
+        <p>Перечисляя достоинства, нельзя обойти и то, что пляжи Фуэртевентуры самые протяженные на Канарах. В итоге невозможно представить их переполненных туристами. Вы столкнетесь только с теми, кого,как и вас, будет интересовать одна цель – обучение серфингу.</p>
+
+        <p>Сначала мы определяем уровень катания и физической подготовки и только потом составляем программу подготовки. И можем заверить, что после того, как закончится обучение, вы не только получите массу великолепных ощущений, но и это уровень поднимется на новую ступень.</p>
+    </div>
+  </div>
+</section>
+
+<!-- end about -->
+
+      <!-- Start benefits -->
+<section class="benefits" id="benefits">
+  <div class="container">
+    <h2 class="title">
+      В школе вы получите
+    </h2>
+   <ul class="benefits__items">
+     <li class="benefits__item">
+       <h3 class="benefits__title benefits__title--1">Проживание</h3>
+       <p>Наша школа серфинга находится в 100 м от океанского побережья. К услугам гостей открытый бассейн и бесплатный Wi-Fi. Из верхней террасы открывается вид на океан. Расстояние до центра города 15 мин.</p>
+     </li>
+     <li class="benefits__item">
+       <h3 class="benefits__title benefits__title--2">Перелет и страховку</h3>
+       <p>Все участники программы застрахованы страховой компанией Allianz.</p>
+       <p>Перелет из Тенерифе до острова Лансароте  и обратно входит в стоимость программы</p>
+     </li>
+     <li class="benefits__item">
+       <h3 class="benefits__title benefits__title--3">Обучение и экипировку</h3>
+       <p>Все оборудование и экипировка известных производителей и предоставляется на весь курс программы. Тренировочный процесс начинается с определения вашего уровня катания</p>
+     </li>
+   </ul>
+    <div class="benefits__info">
+      <ul class="benefits__stats">
+        <li class="benefits__stat benefits__stat--1">
+          <span>85%</span>
+          <p class="benefits__result">
+            Приехали второй раз
+          </p>
+        </li>
+
+        <li class="benefits__stat benefits__stat--2">
+          <span>95%</span>
+          <p class="benefits__result">
+            Научились кататься
+          </p>
+        </li>
+        
+        <li class="benefits__stat benefits__stat--3">
+          <span>99%</span>
+          <p class="benefits__result">
+            Довольных клиентов
+          </p>
+        </li>
+      </ul>
+      <div class="benefits__description">
+        <p>Огромным преимуществом нашей школы является собственная методика обучения. Мы разработали собственный стиль обучения серфингу, который позволяет новичкам максимально быстро встать на доску.</p>
+        <p>Именно наша методика и наши преподаватели позволили нам пройти аттестацию Федерации серфинга Канарских островов - FEDERACIÓN CANARIA DE SURF. Это означает, что наша школа соответствует всем мировым стандартам. Переаттестация производится ежегодно и это позволяет нам всегда стремиться к улучшению обучения.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- End benefits -->
+      <section class="achieve">
+  <!-- обёртка, чтобы блок с текстом оставался на своем месте и картинка на него не налезала -->
+  <div class="achieve__content">
+    <div class="container">
+      <div class="achieve__inner">
+        <h2 class="title achieve__title">
+          Покоряй вершины
+        </h2>
+        <div class="achieve__text">
+          <p>Преподаватели нашей школы серфинга в числе лучших серферов на Канарских островах. Среди них - чемпион
+            Европы
+            по лонгборду, который с радостью поделится опытом как с новичками, так и более опытными серферами.
+            Все члены преподавательского состава являются сертифицированными членами Федерации серфинга Канарских
+            островов. Некоторые из них знают русский язык, что определенно позиционирует нас как русскую школу серфинга
+            за границей!</p>
+          <p>Весь тренерский состав регулярно участвует в семинарах и курсах повышения квалификации, которые проводятся
+            по всему миру различными известными серф-клубами и федерациями. Поэтому в нашей школе серфинга вы можете
+            быть спокойны: вас обучают лучшие тренеры!</p>
+          <p>Методика обучения серфингу рассчитана как на новичков, на серферов среднего уровня, так и на серферов
+            уровня
+            ТОП. Тренеры находят подход к каждому, несмотря на то, что обучение серфингу в нашей школе производится в
+            группах. Однако, мы предлагаем персональные уроки серфинга - только вы и тренер!</p>
         </div>
       </div>
-    </footer>
-
-    <!-- end footer -->
+    </div>
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="js/libs.min.js"></script>
-  <script src="js/main.js"></script>
+  <div class="achieve__image" style="background-image: url(images/content/achieve-img.jpg);"></div>
+</section>
+<!-- end achieve -->
+      <!-- start Gallery -->
+
+<section class="gallery">
+  <div class="container">
+    <h2 class="title gallery__title">Галерея</h2>
+    <div class="gallery__inner">
+      <ul class="gallery__btns">
+        <li>
+          <button type="button" data-filter="all">Все</button>
+        </li>
+        <li>
+          <button type="button" data-filter=".category-tourists">Туристы</button>
+        </li>
+        <li>
+          <button type="button" data-filter=".category-nature">Природа</button>
+        </li>
+        <li>
+          <button type="button" data-filter=".category-prof">Профи</button>
+        </li>
+      </ul>
+
+      <ul class="gallery__items">
+        <li class="mix category-prof" data-order="1">
+          <a href="images/content/gallery-1.jpg">
+            <img src="images/content/gallery-1.jpg" alt="surfGuy">
+          </a>
+        </li>
+        <li class="mix category-tourists" data-order="2">
+          <a href="images/content/gallery-2.jpg">
+            <img src="images/content/gallery-2.jpg" alt="baby on board">
+          </a>
+        </li>
+        <li class="mix category-prof" data-order="3">
+          <a href="images/content/gallery-3.jpg">
+            <img src="images/content/gallery-3.jpg" alt="man with surfboard">
+          </a>
+        </li>
+        <li class="mix category-tourists" data-order="4">
+          <a href="images/content/gallery-4.jpg">
+            <img src="images/content/gallery-4.jpg" alt="surfing women">
+          </a>
+        </li>
+        <li class="mix category-nature" data-order="5">
+          <a href="images/content/gallery-5.jpg">
+            <img src="images/content/gallery-5.jpg" alt="wave">
+          </a>
+        </li>
+        <li class="mix category-nature" data-order="6">
+          <a href="images/content/gallery-6.jpg">
+            <img src="images/content/gallery-6.jpg" alt="girl with surfboard">
+          </a>
+        </li>
+       
+      </ul>
+      <button class="btn gallery__btn" type="button">Показать еще</button>
+    </div>
+  </div>
+</section>
+
+<!-- end Gallery -->
+      <!-- start Motivation -->
+<section class="motivation">
+  <figure class="quote">
+    <blockquote class="quote__text">
+      <p>«Если сомневаешься – иди катайся.»</p>
+      <!-- нужно ли прописывать класс figcaption? На всякий случай прописал -->
+      <figcaption class="quote__author">Нэт Янг, первый Чемпион Мира по сёрфингу</figcaption>
+    </blockquote>
+  </figure>
+  <div class="container">
+    <div class="video" style="background-image: url(images/content/video.jpg);">
+      <a class="video__popup" href="https://www.youtube.com/watch?v=MySzJoo1Reo"></a>
+    </div>
+    <div class="stats">
+      <ul class="stats__list">
+        <li>
+          <h3>450</h3>
+          <p>туристов</p>
+        </li>
+        <li>
+          <h3>2500</h3>
+          <p>часов катания</p>
+        </li>
+        <li>
+          <h3>10</h3>
+          <p>проф. тренеров</p>
+        </li>
+        <li>
+          <h3>365</h3>
+          <p>дней в году</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- end Motivation -->
+      <!-- start blog -->
+
+<section class="blog" id="blog">
+  <h2 class="title">
+    Блог
+  </h2>
+  <!-- Slider main container -->
+  <div class="blog__container">
+    <!-- Additional required wrapper -->
+    <ul class="swiper-wrapper blog__wrapper">
+      <!-- Slides -->
+
+      <li class="swiper-slide blog__slide" style="background-image: url(images/content/blog-1.jpg);">
+        <!-- обёртка для позиционирования -->
+        <div class="blog__item">
+          <div class="blog__text">
+            <h3 class="blog__title">
+              Что необходимо взять с собой на серф тур
+            </h3>
+            <p>ТОП 20 необходимых вещей для комфортного отдыха и обучения</p>
+          </div>
+        </div>
+      </li>
+
+      <li class="swiper-slide blog__slide" style="background-image: url(images/content/blog-1.jpg);">
+        <!-- обёртка для позиционирования -->
+        <div class="blog__item">
+          <div class="blog__text">
+            <h3 class="blog__title">
+              Что необходимо взять с собой на серф тур
+            </h3>
+            <p>ТОП 20 необходимых вещей для комфортного отдыха и обучения</p>
+          </div>
+        </div>
+      </li>
+      <li class="swiper-slide blog__slide" style="background-image: url(images/content/blog-1.jpg);">
+        <!-- обёртка для позиционирования -->
+        <div class="blog__item">
+          <div class="blog__text">
+            <h3 class="blog__title">
+              Что необходимо взять с собой на серф тур
+            </h3>
+            <p>ТОП 20 необходимых вещей для комфортного отдыха и обучения</p>
+          </div>
+        </div>
+      </li>
+      <li class="swiper-slide blog__slide" style="background-image: url(images/content/blog-1.jpg);">
+        <!-- обёртка для позиционирования -->
+        <div class="blog__item">
+          <div class="blog__text">
+            <h3 class="blog__title">
+              Что необходимо взять с собой на серф тур
+            </h3>
+            <p>ТОП 20 необходимых вещей для комфортного отдыха и обучения</p>
+          </div>
+        </div>
+      </li>
+      <li class="swiper-slide blog__slide" style="background-image: url(images/content/blog-1.jpg);">
+        <!-- обёртка для позиционирования -->
+        <div class="blog__item">
+          <div class="blog__text">
+            <h3 class="blog__title">
+              Что необходимо взять с собой на серф тур
+            </h3>
+            <p>ТОП 20 необходимых вещей для комфортного отдыха и обучения</p>
+          </div>
+        </div>
+      </li>
+      <li class="swiper-slide blog__slide" style="background-image: url(images/content/blog-1.jpg);">
+        <!-- обёртка для позиционирования -->
+        <div class="blog__item">
+          <div class="blog__text">
+            <h3 class="blog__title">
+              Что необходимо взять с собой на серф тур
+            </h3>
+            <p>ТОП 20 необходимых вещей для комфортного отдыха и обучения</p>
+          </div>
+        </div>
+      </li>
+      <li class="swiper-slide blog__slide" style="background-image: url(images/content/blog-1.jpg);">
+        <!-- обёртка для позиционирования -->
+        <div class="blog__item">
+          <div class="blog__text">
+            <h3 class="blog__title">
+              Что необходимо взять с собой на серф тур
+            </h3>
+            <p>ТОП 20 необходимых вещей для комфортного отдыха и обучения</p>
+          </div>
+        </div>
+      </li>
+      <li class="swiper-slide blog__slide" style="background-image: url(images/content/blog-1.jpg);">
+        <!-- обёртка для позиционирования -->
+        <div class="blog__item">
+          <div class="blog__text">
+            <h3 class="blog__title">
+              Что необходимо взять с собой на серф тур
+            </h3>
+            <p>ТОП 20 необходимых вещей для комфортного отдыха и обучения</p>
+          </div>
+        </div>
+      </li>
+      <li class="swiper-slide blog__slide" style="background-image: url(images/content/blog-1.jpg);">
+        <!-- обёртка для позиционирования -->
+        <div class="blog__item">
+          <div class="blog__text">
+            <h3 class="blog__title">
+              Что необходимо взять с собой на серф тур
+            </h3>
+            <p>ТОП 20 необходимых вещей для комфортного отдыха и обучения</p>
+          </div>
+        </div>
+      </li>
+      <li class="swiper-slide blog__slide" style="background-image: url(images/content/blog-1.jpg);">
+        <!-- обёртка для позиционирования -->
+        <div class="blog__item">
+          <div class="blog__text">
+            <h3 class="blog__title">
+              Что необходимо взять с собой на серф тур
+            </h3>
+            <p>ТОП 20 необходимых вещей для комфортного отдыха и обучения</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<!-- end blog -->
+      <!-- start team -->
+
+<section class="team" id="team">
+  <div class="container">
+    <h2 class="title team__title">
+      Наша команда
+    </h2>
+    <div class="team__inner">
+      <ul class="team__list">
+        <li class="team__item">
+          <img class="team__img" src="images/content/team-1.jpg" alt="Mike">
+          <h3 class="team__name">
+            Mike
+          </h3>
+          <p>Главный инструктор</p>
+        </li>
+        
+        <li class="team__item">
+          <img class="team__img" src="images/content/team-2.jpg" alt="Mike">
+          <h3 class="team__name">
+            Mary
+          </h3>
+          <p>Инструктор</p>
+        </li>
+
+        <li class="team__item">
+          <img class="team__img" src="images/content/team-3.jpg" alt="Mike">
+          <h3 class="team__name">
+            Ольга
+          </h3>
+          <p>Инструктор</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- end team -->
+      <!-- start service -->
+<section class="service" id="service">
+  <div class="container">
+    <h2 class="title service__title">
+      Пакеты услуг
+    </h2>
+    <!-- Однотипные элементы сделаны списком. Сложные классы убраны -->
+    <ul class="service__inner">
+      <li class="service__card">
+        <h3 class="service__subtitle">
+          Стандарт
+        </h3>
+        <ul class="service__list">
+          <li>
+            Проживание на вилле 6 ночей
+          </li>
+          <li>
+            Экипировка для обучения
+          </li>
+          <li>
+            Номер категории стандарт
+          </li>
+          <li>
+            Обучение серфингу 5 тренировок по 2 часа
+          </li>
+          <li>
+            Страховка
+          </li>
+          <li>
+            Вечеринка с угощениями и дискотекой
+          </li>
+        </ul>
+        <p class="service__price">
+          450 <span class="service__symbol">$</span>
+        </p>
+      </li>
+
+      <li class="service__card">
+        <h3 class="service__subtitle">
+          Все включено
+        </h3>
+        <ul class="service__list">
+          <li>
+            Проживание на вилле 6 ночей
+          </li>
+          <li>
+            Номер категории люкс
+          </li>
+          <li>
+            Экипировка для обучения
+          </li>
+          <li>
+            Обучение серфингу 8 тренировок по 2 часа
+          </li>
+          <li>
+            Страховка
+          </li>
+          <li>
+            Вечеринка с угощениями и дискотекой
+          </li>
+          <li>
+            Авиа перелет Тенерифе -Лансароте - Тенерифе
+          </li>
+          <li>
+            Завтраки на вилле
+          </li>
+        </ul>
+        <p class="service__price">
+          950 <span class="service__symbol">$</span>
+        </p>
+      </li>
+
+      <li class="service__card">
+        <h3 class="service__subtitle">
+          Профи
+        </h3>
+        <ul class="service__list">
+          <li>
+            Проживание на вилле 8 ночей
+          </li>
+          <li>
+            Номер категории люкс
+          </li>
+          <li>
+            Экипировка для обучения
+          </li>
+          <li>
+            Обучение серфингу 16 тренировок по 2 часа
+          </li>
+          <li>
+            Страховка
+          </li>
+          <li>
+            Вечеринка с угощениями и дискотекой
+          </li>
+          <li>
+            Авиа перелет Тенерифе -Лансароте - Тенерифе
+          </li>
+          <li>
+            Завтраки и ужины на вилле
+          </li>
+        </ul>
+        <p class="service__price">
+          1450 <span class="service__symbol">$</span>
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- end service -->
+      <section class="submit" id="submit">
+  <div class="submit__map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111645.62053955902!2d-13.699570180966939!3d29.019191183502876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc461feaa491cbb9%3A0x9172ff7d6432307f!2zMzU1NTgg0JrQsNC70LXRgtCwINC00LUg0KTQsNC80LDRgNCwLCDQm9Cw0YEt0J_QsNC70YzQvNCw0YEsINCY0YHQv9Cw0L3QuNGP!5e0!3m2!1sru!2snl!4v1619047783535!5m2!1sru!2snl"
+      width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+  <div class="container">
+    <h2 class="title submit__title">
+      Оставить Заявку
+    </h2>
+
+    <div class="submit__inner">
+      <form class="form" id="contact" action="#">
+        <label for="formName">
+          <span class="sr-only">Name</span>
+        </label>
+        <input type="text" class="form__input" id="formName" name="formName" placeholder="Имя">
+
+        <label for="formPhone">
+          <span class="sr-only">Telephone</span>
+        </label>
+        <input type="tel" class="form__input form__input--phone" id="formPhone" name="formPhone" placeholder="Телефон" pattern="+[0-9]{11}">
+
+        <label for="formMessage">
+          <span class="sr-only">Leave Message</span>
+        </label>
+        <textarea class="form__input form__input--message" name="formMessage" id="formMessage" rows="8" maxlength="350"
+          placeholder="Оставьте сообщение, и мы свяжемся с Вами в ближайшее время"></textarea>
+
+          <!-- Что более корректно для примиксовки: submit__btn или form__btn? -->
+        <button class="btn form__btn" type="submit">
+          Отправить
+        </button>
+      </form>
+
+      <address class="submit__address">
+        <p>Есть вопрос?
+          <!-- странноватый параграф. Как вариант, задал спану класс, чтобы перенести на другую строку. Или же можно сделать строчку отдельным параграфом и тоже задать класс -->
+          <span class="submit__question">Вы можете связаться с нами:</span>
+        </p>
+        <p>WhatsApp, Viber, Telegram
+          <a class="submit__tel" href="tel:+34674863788">+3 467 486-37-88</a>
+        </p>
+        <p>Avenida grandes playas 79,
+          Corralejo la Oliva Fuerteventura,
+          Spain. 35660
+        </p>
+      </address>
+    </div>
+
+    <ul class="social">
+      <li>
+        <a href="#">Instagram</a>
+      </li>
+      <li>
+        <a href="#">Facebook</a>
+      </li>
+      <li>
+        <a href="#">Youtube</a>
+      </li>
+    </ul>
+  </div>
+</section>
+    </main>
+  </div>
+  <!-- start footer -->
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <a class="logo" href="#">
+        <img class="logo__img" src="images/logo.svg" alt="logo">
+        Logo
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- end footer -->
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/libs.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 
 </html>

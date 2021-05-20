@@ -9,7 +9,7 @@
   &__btns {
     display: flex;
     margin-bottom: 45px;
-    
+
     button {
       @include adaptiv-value("margin-bottom", 10, 0, 0);
       border: none;
@@ -17,70 +17,141 @@
       @include adaptiv-font(24, 16);
       font-weight: 400;
       text-transform: uppercase;
-      transition: color 0.3s;
+      transition: all 0.2s;
       outline: transparent;
       cursor: pointer;
-  
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: '';
+        height: 2px;
+        width: 0;
+        left: 0;
+        bottom: 0;
+        background-color: $green;
+        transition: all 0.3s;
+      }
+
+      &:focus {
+        &::after {
+          width: 100%;
+          right: 0;
+          left: auto;
+        }
+      }
+      
       &:hover {
         color: #00B2A0;
+      }
+      
+      &:active {
+        transform: scale(0.95);
       }
     }
   }
 
 
   &__items {
+    margin: 0 -20px;
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -20px;
 
-    @media (max-width: 1240px) {
+    @media (max-width: $r-l) {
       justify-content: center;
     }
 
     li {
+      padding: 0 20px 40px;
+      max-width: 50%;
       height: 280px;
-      margin: 0 0 40px 0;
-      padding: 0 20px;
       position: relative;
-      transition: all 0.3s;
-      
-      @media (max-width: 1024px) {
-        width: 100%;
-      }
-      
-      @media (max-width: 479px) {
-        max-width: 100%;
-      }
-      
-      &:hover {
-        &::after {
-          opacity: 1;
-        }
+
+      @media (max-width: $r-l) {
+        min-width: 25%;
       }
 
-      &::after {
+      @media (max-width: $r-sm) {
+        width: 100%;
+      }
+
+      @media (max-width: $r-xsm) {
+        max-width: 100%;
+      }
+    }
+
+    /* Нужно ли вложить тег а в li, а img в а или же достаточно того, что они вложены в gallery__items? Классы им не прописывал, так как в этой секции больше не должно быть ничего, кроме картинок, соответственно каждая ссылка здесь - картинка и стили будут одинаковые. */
+    a {
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      overflow: hidden;
+      outline: transparent;
+      transition: all 0.3s;
+
+      &::before {
         content: "";
-        height: 100%;
+        height: 86%;
         position: absolute;
         top: 0;
         right: 20px;
         left: 20px;
         background-color: rgba(51, 51, 51, 0.7);
         opacity: 0;
-        transition: all 0.3s;
+        transition: opacity .5s;
       }
-    }
-    
-    a {
-      max-width: 50%;
+
+      &:focus {
+        border-color: transparent ;
+        border-radius: 30px;
+        &::before {
+          border-radius: 30px;
+        }
+      }
+
+      &:hover {
+        &::before {
+          opacity: 1;
+        }
+      }
+
+      &:active {
+        img {
+          transform: scale(1.1);
+        }
+      }
     }
 
     img {
-      width: 100%;
-      height: 100%;
       object-fit: cover;
       object-position: center;
+      width: 100%;
+      height: 100%;
       transition: transform 0.3s;
+    }
+  }
+
+  &__btn {
+    @include btn-size;
+    display: block;
+    margin: 0 auto;
+    transition: all 0.2s;
+
+    @media (max-width: $r-sm) {
+      max-width: 300px;
+    }
+
+    &:focus {
+      border-color: $green;
+      box-shadow: inset 0px 0px 3px 1px $green;
+    }
+
+    &:hover {
+      box-shadow: inset 0px 0px 3px 1px $green;
+    }
+    
+    &:active {
+      transform: scale(0.9);
     }
   }
 }

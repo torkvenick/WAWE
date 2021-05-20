@@ -29,3 +29,9 @@ $maxWidthContainer: 1200;
     #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
   }
 }
+
+@mixin btn-size {
+  max-width: 350px;
+  width: 100%;
+  padding: 23px 0;
+}

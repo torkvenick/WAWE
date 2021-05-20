@@ -118,9 +118,7 @@
   }
 
   &__btn {
-    max-width: 350px;
-    width: 100%;
-    padding: 23px 0;
+    @include btn-size;
 
     @media (max-width: $r-sm) {
       max-width: 300px;

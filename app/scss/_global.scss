@@ -99,11 +99,6 @@ body._lock {
   text-transform: uppercase;
   outline: transparent;
   cursor: pointer;
-  transition: all 0.3s;
-  
-  &:focus {
-    box-shadow: inset 0px 0px 3px 1px $green;
-  }
 }
 
 //screen reader
