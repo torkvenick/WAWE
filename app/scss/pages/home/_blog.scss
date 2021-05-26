@@ -33,6 +33,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
     @media (max-width: $r-sm) {
       justify-content: start;
       padding-left: 20px;
@@ -44,6 +45,7 @@
     padding-bottom: 30px;
     position: relative; //если убрать - блок ложится под фон .blog__item::before и затемняет текст, что не нужно
     color: #fff;
+
     @media (max-width: $r-sm) {
       max-width: 80%;
     }
@@ -56,8 +58,14 @@
     font-weight: 400;
     margin: 0;
   }
+
+  .swiper-pagination {
+    z-index: 3;
+  }
+
   .swiper-container-horizontal>.swiper-pagination-bullets {
     @include adaptiv-value("bottom", 70, 20, 0);
+
     .swiper-pagination-bullet {
       @include adaptiv-value("width", 15, 10, 0);
       @include adaptiv-value("height", 15, 10, 0);
@@ -66,16 +74,12 @@
       opacity: 1;
       outline: transparent;
       transition: background-color 0.3s;
-  
+
       &:hover {
         background-color: #abcac7;
       }
     }
 
-    .swiper-pagination {
-      z-index: 2;
-    }
-  
     .swiper-pagination-bullet-active {
       background-color: $green;
     }
