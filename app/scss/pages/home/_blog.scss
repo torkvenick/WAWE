@@ -71,6 +71,10 @@
         background-color: #abcac7;
       }
     }
+
+    .swiper-pagination {
+      z-index: 2;
+    }
   
     .swiper-pagination-bullet-active {
       background-color: $green;

@@ -151,19 +151,6 @@
       max-width: 300px;
       margin: 0 auto;
     }
-
-    &:focus {
-      border-color: $green;
-      box-shadow: inset 0px 0px 3px 1px $green;
-    }
-
-    &:hover {
-      box-shadow: inset 0px 0px 3px 1px $green;
-    }
-    
-    &:active {
-      transform: scale(0.9);
-    }
   }
 }
 

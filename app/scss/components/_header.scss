@@ -6,7 +6,7 @@
   padding-top: 35px;
   //чтобы шапка ложилась поверх section intro
   position: absolute;
-  z-index: 50;
+  z-index: 5;
 
   &--fixed {
     min-height: 65px;
@@ -20,7 +20,7 @@
   &__logo {
     max-width: 150px;
     padding-left: 7px;
-    z-index: 50;
+    z-index: 5;
   }
 }
 
@@ -42,12 +42,11 @@
       margin-left: auto;
       position: relative;
       display: block;
-      z-index: 50;
+      z-index: 5;
       cursor: pointer;
     }
 
     &:hover {
-
       &::before,
       &::after,
       span {

@@ -1,22 +1,32 @@
-@@include('../parts/main-components/_head.html')
+<!DOCTYPE html>
+<html lang="ru">
 
-<!-- Оболочка -->
-<div class="wrapper">
-  <div class="content">
-    @@include('../parts/main-components/_header.html')
-    <main class="main">
-      @@include('../parts/page-home/_intro.html')
-      @@include('../parts/page-home/_about.html')
-      @@include('../parts/page-home/_benefits.html')
-      @@include('../parts/page-home/_achieve.html')
-      @@include('../parts/page-home/_gallery.html')
-      @@include('../parts/page-home/_motivation.html')
-      @@include('../parts/page-home/_blog.html')
-      @@include('../parts/page-home/_team.html')
-      @@include('../parts/page-home/_service.html')
-      @@include('../parts/page-home/_submit.html')
-    </main>
+<!-- проверил переменную для title - вроде работает. Этого достаточно или нужно ещё что-то куда-то прописывать? -->
+@@include('../parts/main-components/_head.html', {
+  "title":"WAWE"
+})
+
+<body>
+  <!-- Оболочка -->
+  <div class="wrapper">
+    <div class="content">
+      @@include('../parts/main-components/_header.html')
+      <main class="main">
+        @@include('../parts/page-home/_intro.html')
+        @@include('../parts/page-home/_about.html')
+        @@include('../parts/page-home/_benefits.html')
+        @@include('../parts/page-home/_achieve.html')
+        @@include('../parts/page-home/_gallery.html')
+        @@include('../parts/page-home/_motivation.html')
+        @@include('../parts/page-home/_blog.html')
+        @@include('../parts/page-home/_team.html')
+        @@include('../parts/page-home/_service.html')
+        @@include('../parts/page-home/_submit.html')
+      </main>
+    </div>
+    @@include('../parts/main-components/_footer.html')
   </div>
-  @@include('../parts/main-components/_footer.html')
-</div>
-@@include('../parts/main-components/_footer-scripts.html')
+  @@include('../parts/main-components/_footer-scripts.html')
+</body>
+
+</html>

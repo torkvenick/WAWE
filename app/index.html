@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="ru">
+
+<!-- проверил переменную для title - вроде работает. Этого достаточно или нужно ещё что-то куда-то прописывать? -->
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WAWE</title>
   <link rel="stylesheet" href="css/libs.min.css">
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
 </head>
 
-<body>
+
  
 
-<!-- Оболочка -->
-<div class="wrapper">
-  <div class="content">
-    <!-- start header -->
+<body>
+  <!-- Оболочка -->
+  <div class="wrapper">
+    <div class="content">
+      <!-- start header -->
 <header class="header">
   <div class="container">
     <div class="header__inner">
@@ -30,7 +34,7 @@
           <span></span>
           <span class="sr-only">Menu</span>
         </button>
-        <ul class="menu__list">
+        <ul class="menu__list" id="menuList">
           <li class="menu__item">
             <a class="menu__link" href="#about">
               О нас
@@ -69,8 +73,8 @@
 </header>
 
 <!-- end header -->
-    <main class="main">
-      <!-- start intro -->
+      <main class="main">
+        <!-- start intro -->
 <!-- I think this section should be fullscreen/Думаю, что секция должна быть фуллскрин, поэтому есть расхождение с Pixel Perfect -->
 <section class="intro" id="intro" style="background-image: url(images/bg-intro.jpg);">
   <div class="container">
@@ -89,7 +93,7 @@
   </div>
 </section>
 <!-- end intro -->
-      <!-- start about -->
+        <!-- start about -->
 
 <section class="about" id="about">
   <div class="container">
@@ -118,7 +122,7 @@
 
 <!-- end about -->
 
-      <!-- Start benefits -->
+        <!-- Start benefits -->
 <section class="benefits" id="benefits">
   <div class="container">
     <h2 class="title">
@@ -171,7 +175,7 @@
 </section>
 
 <!-- End benefits -->
-      <section class="achieve">
+        <section class="achieve">
   <!-- обёртка, чтобы блок с текстом оставался на своем месте и картинка на него не налезала -->
   <div class="achieve__content">
     <div class="container">
@@ -200,7 +204,7 @@
   <div class="achieve__image" style="background-image: url(images/content/achieve-img.jpg);"></div>
 </section>
 <!-- end achieve -->
-      <!-- start Gallery -->
+        <!-- start Gallery -->
 
 <section class="gallery">
   <div class="container">
@@ -260,7 +264,7 @@
 </section>
 
 <!-- end Gallery -->
-      <!-- start Motivation -->
+        <!-- start Motivation -->
 <section class="motivation">
   <figure class="quote">
     <blockquote class="quote__text">
@@ -296,7 +300,7 @@
   </div>
 </section>
 <!-- end Motivation -->
-      <!-- start blog -->
+        <!-- start blog -->
 
 <section class="blog" id="blog">
   <h2 class="title">
@@ -425,7 +429,7 @@
 </section>
 
 <!-- end blog -->
-      <!-- start team -->
+        <!-- start team -->
 
 <section class="team" id="team">
   <div class="container">
@@ -463,7 +467,7 @@
 </section>
 
 <!-- end team -->
-      <!-- start service -->
+        <!-- start service -->
 <section class="service" id="service">
   <div class="container">
     <h2 class="title service__title">
@@ -574,7 +578,7 @@
 </section>
 
 <!-- end service -->
-      <section class="submit" id="submit">
+        <section class="submit" id="submit">
   <div class="submit__map">
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111645.62053955902!2d-13.699570180966939!3d29.019191183502876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc461feaa491cbb9%3A0x9172ff7d6432307f!2zMzU1NTgg0JrQsNC70LXRgtCwINC00LUg0KTQsNC80LDRgNCwLCDQm9Cw0YEt0J_QsNC70YzQvNCw0YEsINCY0YHQv9Cw0L3QuNGP!5e0!3m2!1sru!2snl!4v1619047783535!5m2!1sru!2snl"
@@ -637,9 +641,9 @@
     </ul>
   </div>
 </section>
-    </main>
-  </div>
-  <!-- start footer -->
+      </main>
+    </div>
+    <!-- start footer -->
 
 <footer class="footer">
   <div class="container">
@@ -653,10 +657,11 @@
 </footer>
 
 <!-- end footer -->
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="js/libs.min.js"></script>
 <script src="js/main.js"></script>
+
 </body>
 
 </html>

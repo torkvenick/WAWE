@@ -1,14 +1,3 @@
-// Burger menu
-const iconMenu = document.querySelector('.menu__btn');
-/* menu__body */
-const menuBody = document.querySelector('.menu__list');
-if (iconMenu) {
-  iconMenu.addEventListener("click", function (e) {
-    document.body.classList.toggle('_lock');
-    iconMenu.classList.toggle('menu__btn--active');
-    menuBody.classList.toggle('menu__list--active');
-  });
-}
 
 // Active condition of nav link / Активное состояние навигационной ссылки при нажатии
 $('.menu__link').on('click', function (e) {
@@ -31,6 +20,17 @@ $(function () {
     }
   });
 });
+    // Burger menu
+    const iconMenu = document.querySelector('.menu__btn');
+    const menuBody = document.querySelector('.menu__list');
+    const menuItem = document.querySelector('.menu__link');
+    if (iconMenu) {
+      iconMenu.addEventListener("click", function (e) {
+        document.body.classList.toggle('_lock');
+        iconMenu.classList.toggle('menu__btn--active');
+        menuBody.classList.toggle('menu__list--active');
+      });
+    }
 
 //Scroll by click / прокрутка при клике
 $(document).ready(function () {
@@ -39,15 +39,14 @@ $(document).ready(function () {
     event.preventDefault();
     //забираем идентификатор блока с атрибута href
     var id = $(this).attr('href'),
-      //узнаем высоту от начала страницы до блока на который ссылается якорь
-      top = $(id).offset().top;
+    //узнаем высоту от начала страницы до блока на который ссылается якорь
+    top = $(id).offset().top;
     //анимируем переход на расстояние - top за 1500 мс
     $('body,html').animate({
       scrollTop: top
-    }, 700);  
+    }, 700);
   });
 });
-
 
 //Swiper for the blog
 var mySwiper = new Swiper('.blog__container', {
